@@ -1,0 +1,22 @@
+모델빈 .... DTO, 또는 VO getter, setter
+비즈니스 로직... DAO , DB 처리분
+DAO : date Access Object
+DTO : Data Transfer Object
+VO : Value Object
+
+일반적인 DTO는 로직을 갖고 있지 않다.
+순수한 데이터 객체이며, 속성과 그 속성을 접근하기 위한
+getter, setter 메서드만 가진 클래스를 말한다.
+
+====================================================DB 작성
+create table test6(
+id varchar(20) not null primary key,
+name varchar(20) not null,
+email varchar(20),
+tel varchar(30),
+contents text
+);
+
+
+insert into test6 values('hong', '홍길동', 'hong@email.com',
+'010-0000-1111', '홍길동이 테스트합니다.');

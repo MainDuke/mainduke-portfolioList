@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+<!-- init and destroy method -->
+<bean id="cart" class="com.zeroad.spring.service.order.CartService"
+init-method="loadItems" destroy-method="storeItems">
+<constructor-arg value="han"></constructor-arg>
+</bean>
+
+
+<!-- BeanProcessor -->
+<bean id="MyPostProcessor" class="com.zeroad.spring.model.MyPostProcessor">
+
+</bean>
+
+</beans>

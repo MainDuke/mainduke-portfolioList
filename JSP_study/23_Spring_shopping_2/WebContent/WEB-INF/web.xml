@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>23_Spring_shopping_2</display-name>
+  
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- 
+  ContextLoaderListener는 applicationContext.xml 을 읽습니다.
+  ContextLoaderListener클래스는 
+  javax.servlet.ServletContextListener인터페이스를 구현한 클래스입니다.
+  
+  비즈니스 계층용으로 설정파일 (applicationContext.xml ) 을 만들고
+  ContextLoaderListener클래스를 이용해서 읽습니다.
+  
+  WEB-INF/appllicationContext.xml 에는 DB설정, 빈 등록을 한다.
+  
+   -->
+  
+  <servlet>
+ 	 <servlet-name>shopping2</servlet-name>
+ 	 <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+ 	 <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	 <servlet-name>shopping2</servlet-name>
+  	 <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+   
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

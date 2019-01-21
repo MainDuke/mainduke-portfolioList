@@ -1,0 +1,10 @@
+action 문서
+
+forward 액션
+include 디렉티브
+include 액션
+template : 웹 프로그램을 동적 배치.(forward 액션,include액션,include 디렉티브 사용함)
+cookie
+session 
+
+ch4

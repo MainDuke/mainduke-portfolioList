@@ -1,0 +1,8 @@
+calendar.jsp 달력보여주는 프로그램
+
+write.jsp 메모 쓰기
+
+view.jsp 내용보기
+
+delete.jsp (메모삭제)
+

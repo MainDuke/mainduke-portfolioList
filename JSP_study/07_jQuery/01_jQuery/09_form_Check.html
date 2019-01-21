@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	function check(){
+		/*
+		if(window.document.ff.id.value==''){
+			alert("아이디를 입력하시오.");
+			ff.id.focus();
+			return false;
+		}//if end
+		
+		if(window.document.ff.pwd.value==''){
+			alert("패스워드를 입력하시오.");
+			ff.pwd.focus();
+			return false;
+		}//if end
+		
+		if(window.document.ff.name.value==''){
+			alert("이름를 입력하시오.");
+			ff.name.focus();
+			return false;
+		}//if end
+		*/
+		/*jQuery 사용=======================================================*/
+		/*
+		if($('input[name="id"]').val()==""){
+			alert("아이디를 입력하시오.");
+			$('input[name="id"]').focus();
+			return false;
+		}//if end
+		
+		if($('input[name="pwd"]').val()==""){
+			alert("암호를 입력하시오.");
+			$('input[name="pwd"]').focus();
+			return false;
+		}//if end
+		
+		if($('input[name="name"]').val()==""){
+			alert("이름을 입력하시오.");
+			$('input[name="name"]').focus();
+			return false;
+		}//if end
+		
+		*/
+		/*jQuery id사용=======================================================*/
+	
+		if($('#id').val()==""){
+			alert("아이디를 입력하시오.");
+			$('#id').val('').focus();
+			return false;
+		}//if end
+		
+		if($('#pwd').val()==""){
+			alert("암호를 입력하시오.");
+			$('#pwd').val('').focus();
+			return false;
+		}//if end
+		
+		if($('#name').val()==""){
+			alert("이름을 입력하시오.");
+			$('#name').val('').focus();
+			return false;
+		}//if end
+		
+		/*jQuery 응용 사용=======================================================*/
+	
+		if($('#name').val()==""){
+			alert("아이디를 입력하시오.");
+			$('#name').focus();
+			return false;
+		}//if end
+		
+		if(jQuery.trim($('#name').val())==""){
+			alert("암호를 입력하시오.");
+			$('#name').focus();
+			return false;
+		}//if end
+		
+		if($.trim($('#name').val())==""){
+			alert("이름을 입력하시오.");
+			$('#name').focus();
+			return false;
+		}//if end
+		
+	}//end
+	</script>
+	</head>
+
+	<body>
+	<form name="ff" onsubmit="return check()">
+	<table align="center" border="1" borderColor="blue" cellspacung="0" cellpadding="3">
+	
+		<tr>
+		<th colspan="2">회원가입</th>
+		</tr>
+		
+		<tr>
+		<td>아이디</td> 
+		<td><input type="text" name="id" id="id" size="20"></td>
+		</tr>
+	
+		<tr>
+		<td>패스워드</td>
+		<td><input type="password" name="pwd" id="pwd" size="20">
+		</td>
+		
+		<tr>
+		<td>이름</td> 
+		<td><input type="text" name="name" id="name" size="20"></td>
+		</tr>
+		
+		<tr>
+		<td colspan="2" align="center">
+		<input type="submit" value="전송"><!-- type=submit은 form 데이터를 서버로 보낸다. -->
+		<input type="reset" value="취소"><!-- type=reset 은 입력한 값을 취소한다. -->
+		</td>
+		</tr>
+	
+	</table>
+	
+	</form>
+	
+	</body>
+</html>
+
+
+
+
+
+

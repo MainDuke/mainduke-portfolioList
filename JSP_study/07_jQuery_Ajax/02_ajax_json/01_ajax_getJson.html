@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$.getJSON('JSONTest.jsp', function(data){
+		
+		for(var i in data){
+			
+			$('<h1></h1>').text(i+' : '+data[i]).appendTo('body');
+			
+		}
+		
+	});
+	
+});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

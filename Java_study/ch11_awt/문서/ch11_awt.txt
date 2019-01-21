@@ -1,0 +1,9 @@
+윈도우 창 종료 실습
+
+1. 인터페이스를 사용하는 방법
+
+2. inner class 를 사용 하는 방법.
+
+3. 무명 inner class 를 사용하는 방법.
+
+Test01_Window.java

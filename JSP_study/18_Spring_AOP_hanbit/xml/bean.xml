@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="targetBean" class="sample1.MessageBeanImpl">
+	<property name="name">
+	<value>Spring</value>
+	</property>
+</bean>
+
+	<!-- Advice 빈 등록 -->
+	
+	<bean id="loggingAdvice" class="sample1.LoggingAdvice"/>
+	
+	
+	<!-- advisor = advice + pointcut -->
+	<bean id="advisor" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice">
+			<ref local="loggingAdvice"/>
+		</property>
+		<property name="expression" value="execution(* *.*sayHello(..))">
+		</property>
+	
+	</bean>
+	
+	
+	<!-- ProxyFactory -->
+	
+	<!-- ProxyFactoryBean -->
+	
+	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		
+		<property name="target">
+			<ref local="targetBean"/>
+		</property>
+		
+		<property name="interceptorNames">
+			<list>
+				<value>advisor</value>
+			</list>
+		</property>
+		
+	</bean>
+	
+<!-- target 속성에 위빙 대상이 될 bean을, interceptorNames 속성에 advice 또는 advisor를 지정한다.
+(위빙=weaving=결합=>aspect를 target 객체에 적용하여 새로운 proxy 객체가 생성되는 과정.) -->
+</beans>

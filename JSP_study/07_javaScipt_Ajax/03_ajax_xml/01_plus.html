@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- javaScript 와 Ajax -->
+<script type="text/javascript">
+function execute(){
+	var op1=document.getElementById('op1').value;
+	var op2=document.getElementById('op2').value;
+	var url='01_plus_xml.jsp?op1='+op1+'&op2='+op2;
+	
+	ajax=new XMLHttpRequest(); //객체 생성
+	ajax.open("get", url, true);
+	ajax.send(null);//서버로 요청
+	ajax.onreadystatechange=function(){
+	
+	if(ajax.readyState==4 && ajax.status==200){
+		//readyState==4 : 모든 데이터 도착 완료(수신 완료)
+		//status==200 :요청 성공
+		var res=ajax.responseXML; //서버로 부터 데이터를 받는다.
+		
+		alert(ajax.responseXML);
+		
+		var res2=res.getElementsByTagName('result')[0].getAttribute('value');//서버로 부터 데이터를 받는다.
+		
+		document.getElementById('result').value=res2; //클라이언트에 반영
+		
+		
+		
+		}//if
+	}//function end
+
+}//excute
+
+</script>
+
+</head>
+<body bgcolor="yellow">
+안녕하세요<br>
+안녕하세요<br>
+안녕하세요<br>
+<input type="text" id="op1"/>+<input type="text" id="op2"/>
+<input type="button" id="exe" value="=" onclick='execute()'>
+<input type="text" id="result" readonly="readonly" value=""><br>
+안녕하세요<br>
+안녕하세요<br>
+안녕하세요<br>
+</body>
+</html>

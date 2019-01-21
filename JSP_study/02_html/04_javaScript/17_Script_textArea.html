@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function ss() {
+	document.myform.ta2.value=document.myform.ta1.value;
+}
+function ss2() {
+	document.myform.ta2.value=document.myform.ta1.value;
+	document.myform.ta1.value="";
+}
+
+function remove() {
+	document.myform.ta1.value="";
+	document.myform.ta2.value="";
+}
+</script>
+<style type="text/css" >
+.back{background-color: yellow; font-size: 15; color: blue };
+</style>
+</head>
+<body>
+<form name="myform">
+<textArea name="ta1" class="back" rows="3" cols="40"></textArea>
+
+<input type="button"  value="복사" onClick="ss()" >
+<input type="button"  value="옴기기" onClick="ss2()" >
+<input type="button"  value="지우기" onClick="remove()" ><br>
+
+<textarea name="ta2" class="back" rows="3" cols="40"></textarea>
+</form>
+</body>
+</html>

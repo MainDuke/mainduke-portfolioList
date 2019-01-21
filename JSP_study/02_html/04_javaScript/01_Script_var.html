@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>01_javaScript_var</title>
+	
+	<script type="text/javascript">
+	a=1; //전역변수
+	var m =11; //var를 붙이면 지역변수 여야 하지만~~....
+
+	function bb(){
+		a=3; //전역변수 사용.
+		AA=1000; //지역변수
+		b= 444 //전역
+		m= 11011;
+		kk=999;
+	}//bb end
+	
+	function aa(){
+		var i=2; //지역변수
+		b= 333 ; //전역변수
+		m=22;
+		
+		document.write("함수 호출전 i :"+i+"<br>");/// }
+		document.write("함수 호출전 a :"+a+"<br>");///}
+		document.write("함수 호출전 b:"+b+"<br>");///}
+		document.write("함수 호출전 m :"+m+"<br>");///}
+		document.write("함수 호출전 bb :"+bb+"<br>");///}
+		//document.write("함수 호출전 bb :"+AA+"<br>");///}
+		//document.write("함수 호출전 kk :"+kk+"<br>");///}
+		//bb 안에서 선언된 지역변수는~ bb가 호출된 이후 사용가능.
+		
+		bb();	
+		document.write("함수 호출후 i :"+i+"<br>");/// 1}
+		document.write("함수 호출후 a :"+a+"<br>");/// 1}
+		document.write("함수 호출후 b :"+b+"<br>");/// 1}
+		document.write("함수 호출후 m :"+m+"<br>");/// 1}
+		document.write("함수 호출후 bb :"+AA+"<br>");/// 1}
+		document.write("함수 호출후 kk :"+kk+"<br>");/// 1}
+		
+		kk=999000999;
+		document.write("함수 재 선언 후 kk :"+kk+"<br>");/// 1}
+		
+	
+	}//aa end
+	
+	
+	</script>
+	
+	</head>
+	
+	<body>
+	<input type="button" value="함수호출" onclick="aa()">
+	<input type="button" value="함수호출" onclick="aa()">
+	</body>
+</html>

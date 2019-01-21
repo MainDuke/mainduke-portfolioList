@@ -1,0 +1,15 @@
+27_iBatis 프로젝트 
+
+lib/*.jar
+
+web.xml 작업
+
+src/config/dbconnect.properties
+src/config/SqlMapConfig.xml
+
+src/config/User.xml
+src/config/applicationContext.xml
+
+WEB-INF/user222-servlet.xml
+
+

@@ -1,0 +1,84 @@
+Exception : 예외
+
+예외란 : 프로그램 실행하는 동안 예기치 않은 이상 상태가 발생하는것.
+
+	실행 도중에 발생하는 심각하지 않은 오류.
+
+	예> 채팅하다가, 순간적으로 컴퓨터를 끌때
+	이 사람을 제외 시키고, 다른 사람들은 계속 채팅한다.
+
+자바에서는 예상할 수 있는 여러가지 상황에 대비하여
+코드를 작성하게 함으로써, 좀 더 견고한(잘 죽지 않는) 프로그램을 만들 수 있도록 유도한다.
+
+
+Exception 클래스 계층 구조.
+
+Exception --- IOException
+	  --- FileNotFoundException
+	  --- ClassNotFoundException ... 컴파일 에러로 고칠 수 없는 에러.
+
+	  --- ArrayIndexOutOfBoundsException
+	  --- NumberFormatException
+	  --- ArithmetException ... Rutime 에러 : 고칠 수 있는 에러.
+
+예외처리하는 2가지 방법
+
+방법 1 : 직접처리 : 예외가 발생할 수 있는 부분을 try{}문으로 감싸고, 
+			예외가 발생 했을때, 처리할 내용은 catch(){}문으로 감싸놓는다.
+
+
+========================================================================================
+try{
+처리내용;
+}catch(예외종류){}
+ catch(예외종류){}
+ catch(예외종류){}
+ catch(예외종류){}
+ finally절{}
+/*finally절은 예외 발생과 상관없이 수행된다.
+심지어 앞에 return; 문이 있어도 finally절은 수행된다.
+그러나 앞에 System.exit(0); 문이 있을때는 finally절은 실행되지 않는다.*/
+
+========================================================================================
+
+방법2>  간접처리 
+--------------------------------------
+결과형 메서드명(매개변수) throws 예외종류
+{
+  처리문;
+}
+--------------------------------------
+
+* 이경우는 메서드 내용을 처리하던중 예외가 발생하면
+메서드를 호출했던 시점으로 제어권을 넘긴다
+
+만약 
+public static void  main( String args[])  throws 예외 종류
+{}
+이런 경우에는 JVM으로 되돌린다 
+
+
+
+throws : 제어권을 메서드를 호출한 그곳으로 넘긴다.
+
+========================================================================================
+throw
+throw new TestException(); //객체생성 (예외 생성)
+
+--구조
+
+public ExceptionTest{
+	void method() throws MyException{
+			if(MyException 발생조건){
+			throw new MyException("메세지");
+			}
+	}
+}
+
+class Myexception extends Exception{
+//생성자
+public MyException(String msg){
+	super(msg); //상위 클래스 생성자 호출.
+
+}
+}

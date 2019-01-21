@@ -1,0 +1,72 @@
+28_iBatis_Web_board
+
+web.xml
+
+mysql>create databases ibatisDB
+mysql>use ibatisDB
+
+테이블 생성
+
+create table board(
+num int not null auto_increment primary key,
+writer varchar(20),
+subject varchar(30),
+email varchar(30),
+content text not null,
+pwd varchar(8),
+wdate datetime,
+readcount int unsigned default 0,
+ip varchar(20));
+
+desc board;
+
+use ibatisDB;
+
+show tables;
+
+=================================
+lib/*.jar  ************
+
+src/config/dbconnect.properties
+src/config/SqlMapConfig.xml
+src/config/ApllicationContext.xml
+WEB_INF/board22-servlet.xml
+
+src/model/Board.java 
+src/config/Board.xml
+
+인터페이스 . board.service.BoardDao
+구현 클래스. board.service.BoardDaoImplService
+
+src/board/service/ClientTest.java 테스트
+
+============================================
+웹작업----
+WEB_INF/board22-servlet.xml
+controller.BoardController.java
+
+뷰------
+WEB_INF/board/list.jsp
+				write.jsp
+				content.jsp
+				update.jsp
+				delete.jsp	
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

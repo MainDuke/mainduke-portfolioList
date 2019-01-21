@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+str="";
+op="";
+
+function calc2(op){
+	a1=document.calcForm.t1.value;
+	a2=document.calcForm.t2.value;
+	b1=eval(a1+op+a2);
+	document.calcForm.t3.value=b1;
+	str+=a1+op+a2+"="+b1+"\n"
+	document.calcForm.ta.value=str;
+	document.calcForm.calc.value=op;
+	
+}//end calc2
+function cls(){
+		document.calcForm.t1.value="";
+		document.calcForm.t2.value="";
+		document.calcForm.t3.value="";
+		document.calcForm.ta.value="";
+		str="";
+}//end cls
+
+</script>
+
+</head>
+<body bgcolor=pink>
+ <form name="calcForm">
+ 	<textArea name="ta" rows=12 cols=30></textArea><br>
+ 	<input type="text" name="t1"	size="12">&nbsp; 
+ 	<input type="button" name="calc" value="??" >&nbsp; 
+ 	<input type="text" name="t2"	size="12">&nbsp; 
+ 	
+ 	<br>
+ 	<input type="button"  name="+"  value="+"  onClick="calc2(value)">&nbsp; 
+ 	<input type="button"  name="-"  value="-"  onClick="calc2(value)">&nbsp; 
+ 	<input type="button"  name="*"  value="*"  onClick="calc2(value)">&nbsp; 
+ 	<input type="button"  name="/"  value="/"  onClick="calc2(value)">&nbsp; 
+ 	<br>
+ 	<input type="text" name="t3"	size=15>&nbsp; 
+ 	<input type="button" name="reset"	value="C" onClick=cls()>&nbsp; 
+ </form>
+</body>
+</html>

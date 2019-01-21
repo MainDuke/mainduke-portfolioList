@@ -1,0 +1,8 @@
+classpath
+.;%JAVA_HOME%\lib\tools.jar;C:\cos-26Dec2008\lib\cos.jar;
+
+JAVA_HOME
+C:\Program Files\Java\jdk1.7.0_79
+
+톰캣=lib = 4개 다 들어있어야함
+자바 jre > 

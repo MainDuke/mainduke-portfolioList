@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function insa(){
+	
+	document.write("welcome<br>");
+	document.write("안녕하세요.<br><br>");
+	
+}//end
+
+function star() {
+	for ( i = 1; i <= 4;  i++) {
+		
+		if (i%2==0) {
+			document.write("<font color='blue'>");
+		}else{
+			document.write("<font color='red'>");
+		}
+		
+		for ( j = 1; j < (5-i); j++) {
+		 document.write(" &nbsp");
+		}//inner 1
+		for (k = 1; k <= (i*2-1); k++) {
+			document.write("*");
+		}//inner2
+		document.write("</font><br>");
+	}//for end
+}//star end
+
+
+
+</script>
+
+
+</head>
+<body>
+
+<input type="button" value="인사" onClick="insa()">
+<input type="button" value="별" onClick="star()">
+<pre>
+	이벤트 : 마우스나 키보드로 입력할 때 발생하는 신호
+	이벤트 핸들러(함수) : 이벤트가 발생했을때 수행되는 함수를 말한다.
+	
+	onClick : 마우스를 클릭했을때
+	onMouseOver : 마우스 커서가 올려졌을때
+	onLoad :  html page 시작시에 실행 (body 태그에서만 사용되어야 한다.)
+	onUnload : page 끝 page에서 나갔을때 (body 태그에서만 사용되어야 한다.)
+	onChange : 값이 변경되었을때
+	onBlur :  커서가 있을 시 (focus 을 잃었을때) 발생.
+	onFocus :  커서가 있을 시 (focus 을 얻었을 때) 발생.
+	
+	onKeyDown : 키를 눌렀을 때 발생.
+	onKeyUp : 키를 눌렀다가 떼었을떄 발생하는 핸들러
+
+</pre>
+
+
+</body>
+</html>

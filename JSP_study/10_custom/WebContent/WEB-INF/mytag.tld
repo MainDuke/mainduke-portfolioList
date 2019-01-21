@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mytag.tld -->
+<taglib>
+	<tlibversion>1.0.0.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>mylib</shortname>
+	<info>first tag</info>
+	
+	<tag>
+		<name>date</name>
+		<tagclass>mypa.DateTag</tagclass>
+		<bodycontent>empty</bodycontent>
+	</tag>
+	
+	<!-- 
+	<tag>
+		<name>date</name> 태그이름
+		<tagclass>mypa.DateTag</tagclass> 클래스
+		<bodycontent>empty</bodycontent> 태그 몸체가 없는 경우
+	</tag>
+	 -->
+</taglib>

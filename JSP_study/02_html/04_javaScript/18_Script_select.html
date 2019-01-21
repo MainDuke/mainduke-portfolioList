@@ -1,0 +1,79 @@
+<xmp>
+☆노트정리
+
+m=document.myform.fruit.option.selectedIndex;
+document.myform.fruit.option[m].text ....m번째 text 반환.
+
+document.myform.fruit.option[m].value ....값 얻는다.
+document.myform.fruit.option[m].selected ....m번째가 선택되었으면
+
+document.myform.fruit.option.length ....List 갯수 반환
+
+document.write(document.myform.fruit.options[1].value+"<p>"); //value
+document.write(document.myform.fruit.options[1].text+"<p>"); //text 출력
+document.write(document.myform.fruit.options.selectedIndex+"<p>"); //index 출력
+document.write(document.myform.fruit.options.length+"<p>"); //갯수 출력
+
+location.replace("url") : url 로 대체. (back key  이전으로 이동 안된다.)
+location.href="url" :url 로 이동 (back key  이전으로 이동)
+OnChange="self.location='url'" : url 로 변경.
+
+</xmp>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function ss(){
+/*	
+if (document.myform.fruit.option[0].selected) {
+	alert("직업을 선택하지 않았습니다.");
+}
+else{
+	for (i = 0; i < document.myformj.fruit.option.length; i++) {
+		if (document.myform.fruit.option[i].selected) {
+			x1=document.myform.fruit.option[i].text;
+			x1=document.myform.fruit.option[i].value;
+			alert("text : "+x1+"\nvalue= "+x2);'
+		}//if
+	}//for
+}//else
+*/
+m=document.myform.fruit.options.selectedIndex; //선택된 인덱스 번호.
+alert("선택 된 인덱스 번호 selectedIndex :" +m);
+
+m2=document.myform.fruit.options[m].text;
+m3=document.myform.fruit.options[m].value;
+
+alert(" 선택된 text : "+m2+"\n 선택된 value : "+m3);
+
+}//ss end
+
+</script>
+
+</head>
+<body>
+
+<h1 align=center>좋아하는 과일 선택하시오.</h1>
+
+<form name="myform"  action=""  method="get" >
+
+	<select name="fruit">
+		<option selected>선택하시오.
+		<option value="apple">사과
+		<option value="banana">바나나
+		<option value="watermelon">수박
+		<option value="strawberry">딸기
+		<option value="orange">오렌지
+	<option value="peach">복숭아
+	</select>
+	
+	
+<input type="button"  value="버튼"  onClick="ss()">
+</form>
+
+</body>
+</html>

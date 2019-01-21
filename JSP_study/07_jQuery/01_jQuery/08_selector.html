@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+
+//$(document).ready(function(){
+$(function(){
+	
+	//$('#input[type=text]').val('hello jQuery...')//id 선택자
+	//$('#input[type=text]').css('color','blue'); //class 선택자
+	//이렇게 따로 써도 될것을, 밑에 처럼 같이 써도 된다.
+	
+	//.val() => 값 설정, 값 삭제=>.val("")
+	$('#input[type=text]').val("hello jQuery...").css('color','blue'); //class 선택자
+	
+});
+
+</script>
+
+</head>
+<body>
+
+<input type="text" name="id"><br>
+<input type="text" name="pwd"><br>
+<input type="text" name="name"><br>
+<input type="password"><br>
+<input type="checkbox">체크박스<br>
+<input type="radio">라디오 버튼<br>
+
+<input type="file" name="ff">라디오 버튼<br>
+
+
+</body>
+</html>

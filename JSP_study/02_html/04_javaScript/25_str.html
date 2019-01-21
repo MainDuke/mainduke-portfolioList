@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="UTF-8">
+			<title>25_str.html 문자열 처리.</title>
+	
+	<script type="text/javascript">
+	
+	function aa(){
+		str="welcome!!!";
+		//    0123456789
+		m1=str.charAt(1);
+		document.write(m1+"<br>");
+		
+		m2=str.indexOf('c');
+		document.write(m2+"<br>");
+		
+		m3=str.slice(2,4); //2부터 4 직전까지, str.substring(2,4)
+		document.write(m3+"<br>");
+		
+		m4=str.substring(2,4);//2번째 부터 4개 문자열 발췌
+		document.write(m4+"<br>");
+		
+		m4=str.substr(2,4);
+		document.write(m5+"<br>");
+		
+	}//aa end
+		</script>
+		</head>
+	
+	
+	<body>
+	
+	<input type="button"  value="aa()" onClick="aa()">
+	</body>
+</html>

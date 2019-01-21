@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<xmp>
+★노트정리
+history 객체 : 브라우저로 보았던 사이트를 임시로 저장
+history.back() : 이전
+history.go(-1) : 이전
+history.forward() :  앞으로
+history.go(2)   : 앞으로 2 만큼
+history.go(-2)  : 뒤로 2만큼
+location.replace(“url”) : 지정 url 로 대치 ( back() 안된다 )
+location.href=”url” : back 키 기능 된다
+location.reload() : 새로 고침 현재 화면을 다시 읽는다)
+</xmp>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function back(){
+	history.back();
+}
+function front(){
+	history.forward();
+	
+}
+function go(){
+	history.go(-1);
+}
+function rr(){
+	alert("11");
+	location.replace("http://www.naver.com");
+}
+function hh(){
+	alert("1122");
+	location.href="http://www.naver.com";
+}
+</script>
+</head>
+<body>
+<form>
+	<input type="button" value="back()" onclick="back()">
+	<input type="button" value="front()" onclick="front()">
+	<input type="button" value="go()" onclick="go()">
+	<input type="button" value="replace()" onclick="rr()">
+	<input type="button" value="hh()" onclick="hh()">
+	</form>
+
+
+</body>
+</html>

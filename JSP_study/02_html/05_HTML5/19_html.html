@@ -1,0 +1,58 @@
+<xmp>
+<tr>
+<td></td>
+</tr>
+<td colspan="2">
+<td colspan="합칠열의 갯수"> 145
+
+scope 속성 값 146
+
+row : <th> 태그가 있는 행의 나머지 셀에 적용됩니다
+col : <th> 태그가 있는 열의 나머지 셀에 적용
+rowgroup : <th> 태그가 있는 행 집합의 나머지 모든 셀에 적용.
+colgroup : <th> 태그가 있는 열 집합의 나머지 모든 셀에 적용.
+auto : 소스를 기본으로 해서 <th> 셀에 적용.
+
+</xmp>
+
+<!DOCTYPE html>
+<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+		</head>
+		
+		<body>
+		
+	<table border=1>
+	<col style="background-color: yellow";>
+		
+		<caption>요안도라 객실</caption>
+		<tr style="background-color: skyblue";>
+		<th scope="col">방이름</th>
+		<th scope="col">대상</th>
+		<th scope="col">크기</th>
+		<th scope="col">가격</th>
+		</tr>
+		
+		<tr>
+		<!-- colgroup : th 태그가 있는 열의 집합 146  page -->
+		<!-- rowgroup: <th> 태그가 있는 행의 집합 146  page -->
+		<th scope="rowgroup">유채방</th>
+		<td>도미토리</td>
+		<td>4인실</td>
+		<td>1인 20만원</td>
+		</tr>
+		
+		<tr>
+		<th scope="rowgroup">백합방</th>
+		<td>도미토리</td>
+		<td>4인실</td>
+		<td>1인 15만원</td>
+		</tr>
+		
+		
+	</table>
+		
+		</body>
+</html>

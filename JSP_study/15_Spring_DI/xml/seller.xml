@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+<bean id="pc3" class="com.zeroad.spring.model.product.Computer">
+	<constructor-arg value="PC-31"/>
+	<property name="cpu" value="i7"/>
+	<property name="memory" value="7G"/>
+	<property name="disk" value="100G"/>
+</bean>
+
+<!-- method Injection -->
+<bean id="contentsReplacer" class="com.zeroad.spring.model.ContentReplacer"></bean>
+
+<bean id="pc4" parent="pc3">
+	<replaced-method name="getContents" replacer="contentsReplacer"></replaced-method>
+</bean>
+
+<!-- getter Injection -->
+<bean id="seller" class="com.zeroad.spring.model.product.Seller">
+
+<!-- pc3 찾다. -->
+<lookup-method name="getComputer" bean="pc3"/>
+<property name="name" value="mr.han"></property>
+</bean>
+
+
+<!-- name="getComputer 이용하여 pc3 찾는다.
+즉, Computer 객체를 얻는다.
+getComputer().getContents(); 에서 getComputer()는 Computer 객체다. (클래스)
+
+ -->
+
+
+
+</beans>

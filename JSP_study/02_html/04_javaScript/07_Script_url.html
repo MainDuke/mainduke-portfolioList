@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+		
+		var m;
+		m=confirm("제게 메일을 보내시겠습니까?");
+		
+		if (m==true) {
+			alert("감사");
+			//location.replace("mailto:http://www.imbc.com"); //메일 보내기 창 표시
+			location.replace("http://www.naver.com") //메일 보내기 창 표시.
+					
+					// <==== (back key) : 안먹힌다.
+		}else{
+			alert("TV나 볼까?");	
+			location.href="http://www.imbc.com";
+			// <==== (back key) : 안먹힌다.
+		}
+		
+	
+	</script>
+</body>
+</html>

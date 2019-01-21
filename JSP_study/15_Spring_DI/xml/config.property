@@ -1,0 +1,4 @@
+http.url=http://loacalHost:9001
+https.url=https://loacalHost:9001
+image.url=http://loacalHost:9001
+temp.dir=d:\\temp

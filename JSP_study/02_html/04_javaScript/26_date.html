@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function time(){
+	today = new Date();
+	
+	document.write((today.getFullYear())+"년 "
+			+(today.getMonth()+1)+"월 "
+			+today.getDate()+"일<p> ");	
+	
+	switch (today.getDay()) {
+	case 0:	day="일요일"; break;
+	case 1:	day="월요일"; break;
+	case 2:	day="화요일"; break;
+	case 3:	day="수요일"; break;
+	case 4:	day="목요일"; break;
+	case 5:	day="금요일"; break;
+	case 6:	day="토요일"; break;
+	}//switch
+
+	document.write(day+"<p>"); //요일
+	document.write(today.getHours()+"시 "
+			+today.getMinutes()+"분 "
+			+today.getSeconds()+"초 ");
+	
+}//time end
+
+</script>
+
+</head>
+<body onLoad="time()">
+
+</body>
+</html>

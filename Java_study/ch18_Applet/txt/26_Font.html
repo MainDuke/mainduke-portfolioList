@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:"\@맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:"\@바탕";
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	font-family:"바탕","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"머리글 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	font-family:"바탕","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"바닥글 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	font-family:"바탕","serif";}
+span.Char
+	{mso-style-name:"머리글 Char";
+	mso-style-link:머리글;
+	font-family:"바탕","serif";}
+span.Char0
+	{mso-style-name:"바닥글 Char";
+	mso-style-link:바닥글;
+	font-family:"바탕","serif";}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:99.25pt 3.0cm 3.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=KO style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'><img width=580
+height=176 src="ch18_03_Font.files/image001.jpg"></span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>Java.awt..FontMetrics
+</span><span style='font-family:"맑은 고딕"'>클래스를 통해 글꼴 크기와 관련된 여러 정보를 얻을 수 있다 </span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span style='font-family:"맑은 고딕"'>글꼴 크기
+정보로<span lang=ko> ascent, descent, leading, height</span>등이 있다<span lang=ko> </span></span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span style='font-family:"맑은 고딕"'>문자열이 표시될
+때 모든 문자열 수평 기준선<span lang=ko>(baseline)</span>에 맞추어 표시된다</span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>Asecent</span><span
+style='font-family:"맑은 고딕"'>는 기준선 위로 확장되는 픽셀 수 이고</span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>Descent
+</span><span style='font-family:"맑은 고딕"'>는 기준선 아래로 확장되는 픽셀 수 이다<span lang=ko> </span></span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>Leading
+</span><span style='font-family:"맑은 고딕"'>은<span lang=ko> descent </span>의 위쪽기준선과<span
+lang=ko> ascent</span>의 아래쪽 기준선의 사이의 픽셀 수 이다<span lang=ko> </span></span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>Height</span><span
+style='font-family:"맑은 고딕"'>는<span lang=ko> ascent, descent, leading</span>의 합계이다<span
+lang=ko> </span></span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:10.0pt;text-align:left;
+line-height:12.0pt;word-break:keep-all'><span lang=ko style='font-family:"맑은 고딕"'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

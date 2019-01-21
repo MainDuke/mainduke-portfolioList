@@ -1,0 +1,45 @@
+create table user_account(
+user_id varchar(20),
+user_name varchar(20),
+password varchar(20),
+postcode varchar(8),
+address varchar(50),
+email varchar(50),
+job varchar(30),
+birthday date,
+primary key (user_id)
+);
+
+delete from user_account;
+load data local infile 'c:\\shopping\\user.csv'
+into table user_account
+fields terminated by ','
+lines terminated by '\r\n';
+
+
+lib 복사
+
+WEB-INF/web.xml
+WEB-INF/applicationContext.xml
+WEB-INF/shopping3-servlet.xml
+
+src/msg.properties
+
+logic.User.java 모델빈
+dao.UserDao.java 인터페이스
+dao.UserDaoImpl.java 구현 클래스
+
+logic.UserCatalog.java 인터페이스
+logic.UserCatalogImpl.java 구현 클래스
+
+logic.Shop.java 인터페이스
+logic.ShopImpl.java 구현 클래스
+
+
+----action;
+WEB-INF/jsp/jsp_header.jsp
+WEB-INF/jsp/login.jsp
+WEB-INF/jsp/loginSuccess.jsp
+
+//실행
+http://localhost:9001/컨텍스트이름/login.html

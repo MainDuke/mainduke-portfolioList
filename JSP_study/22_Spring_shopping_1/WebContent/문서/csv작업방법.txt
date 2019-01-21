@@ -1,0 +1,11 @@
+item.csv 파일을   ( ANSI 형식으로 저장 )
+c:\shopping\item.csv 복사
+
+mysql 들어가서
+use spring;
+
+delete from item;
+load data local infile 'c:\\shopping\\item.csv' 
+into table item 
+fields terminated by ','
+lines terminated by '\r\n';

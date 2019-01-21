@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<xmp>
+Document 객체
+gbColor=배경색
+fgColor=글씨색
+linkColor = 하이퍼링크 걸어서 사용하기전 색
+alinkColor=방문중인 색
+vlinkColor=방문후 색
+ </xmp>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function bg(){
+	document.bgColor="yellow";	
+}
+function fg(){
+		document.fgColor="magenta";
+}
+function link(){
+	document.linkColor="green";
+	document.alinkColor="red";
+	document.vlinkColor="cyan";
+	}
+</script>
+</head>
+<body>
+<form >
+<a href="http://www.naver.com">네이버</a>
+<a href="http://www.daum.net">다음</a>
+<a href="http://www.google.com">구글</a>
+
+<input type="button" value="배경색" onclick="bg()">
+<input type="button" value="글씨색" onclick="fg()">
+<input type="button" value=" Link" onclick="link()">
+
+
+</form>
+</body>
+</html>

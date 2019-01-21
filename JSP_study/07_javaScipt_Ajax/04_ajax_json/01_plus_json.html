@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function exeJson(){
+	
+	var p1=document.getElementById("p1").value;
+	var p2=document.getElementById("p2").value;
+	var url="01_plus_json.jsp?p1="+p1+"&p2="+p2;
+	
+	ajax=new XMLHttpRequest(); //객체 생성
+	
+	ajax.onreadystatechange=function(){
+		if(ajax.readyState==4 && ajax.status==200){
+			
+			//alert(ajax.responseText);
+		
+			var jsonData=ajax.responseText;
+			var res=eval('('+jsonData+')'); //파싱 작업
+			
+			document.getElementById("re").value=res.re;
+			
+		}//if		
+	}//func
+	ajax.open('GET',url, true);
+	ajax.send(null); //서버로 요청 전송
+}//function end
+
+
+</script>
+
+</head>
+<body bgcolor="margenta">
+<input type="text" id="p1">+<input type="text" id="p2">
+<input type="button" value="=" onclick="exeJson()">
+<input type="text" id="re" readonly="readonly">
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

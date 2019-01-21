@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var cal="";
+var cherk=-1;
+function bs()
+{
+var str=document.calc.calcTf1.value;
+document.calc.calcTf1.value =str.substring(0, str.length - 1);
+
+var str2=cal;
+cal=str2.substring(0,str2.length -1);
+
+
+alert("last cal: "+cal+" 현재cal=str:"+str+" 수정시키는cal str2:"+str2);
+
+// substring 으로 0부터 value 길이에서 -1 한 만큼의 길이를 출력한다
+}
+
+function ccc(vari){
+	
+	if (!isNaN(vari)) {
+		cal+=vari;	
+		cherk=1;
+	}else if (cherk<0) {
+		alert("숫자를 입력하시오.")
+		return;
+	}else if (cherk>0 && isNaN(vari)){
+		cal+=vari;
+		cherk=-1;
+	}
+	document.calc.calcTf1.value+=vari;		
+}//end cal
+
+function ans(){
+	document.calc.clacAns.value =eval(cal);
+}//end ans
+
+function clear(){
+	document.calc.calcTf1.value ="";
+	document.calc.clacAns.value ="";
+	cal="";
+}
+
+</script>
+ 
+
+</head>
+<body>
+
+<form name="calc">
+<table>
+
+<tr>
+<td>계산식:<input type="text" name="calcTf1"></td>
+<td>결과 값 : <input type="text" name="clacAns"></td>
+</tr>
+
+
+<tr><td>
+
+<input type="button" name="1" value="test" onClick="ans()">
+<input type="button" name="1" value="1" onClick="ccc('1')">
+<input type="button" name="2" value="2" onClick="ccc('2')">
+<input type="button" name="3" value="3" onClick="ccc('3')">
+<input type="button" name="+" value="+" onClick="ccc('+')">
+</td></tr>
+
+<tr><td>
+<input type="button" name="4" value="4" onClick="ccc('4')">
+<input type="button" name="5" value="5" onClick="ccc('5')">
+<input type="button" name="6" value="6" onClick="ccc('6')">
+<input type="button" name="-" value="-" onClick="ccc('-')">
+</td></tr>
+
+<tr><td>
+<input type="button" name="7" value="7" onClick="ccc('7')">
+<input type="button" name="8" value="8" onClick="ccc('8')">
+<input type="button" name="9" value="9" onClick="ccc('9')">
+<input type="button" name="*" value="*" onClick="ccc('*')">
+</td></tr>
+
+<tr><td>
+<input type="button" name="0" value="0" onClick="ccc('0')">
+<input type="button" name="reset" value="C" onClick="clear()">
+<input type="button" name="delete" value="del" onClick="bs()">
+<input type="button" name="/" value="/" onClick="ccc('/')">
+</td></tr>
+</table>
+
+</form>
+</body>
+</html>

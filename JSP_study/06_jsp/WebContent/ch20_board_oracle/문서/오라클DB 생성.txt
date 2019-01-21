@@ -1,0 +1,27 @@
+오라클 테이블 작서
+
+sqlplus scott/tiger
+drop sequence board_seq //시퀀스 삭제
+create sequence board_seq // 일련번호
+
+================================
+create table board(
+num number(11) primary key,
+name varchar2(20) not null,
+email varchar2(30),
+homepage varchar2(30),
+subject varchar2(30) not null,
+content varchar2(4000),
+pos int,
+depth int,
+regdate date,
+pass varchar2(20),
+count int default 0,
+ip varchar2(20)
+);
+
+
+String DRIVER="oracle.jdbc.driver.OracleDriver";
+String URL="jdbc:oracle:thin:@localhost:1521:orcl";
+String User="scott";
+String PWD="tiger";

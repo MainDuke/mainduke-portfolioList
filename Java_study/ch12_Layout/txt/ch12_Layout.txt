@@ -1,0 +1,27 @@
+ch12_Layout 폴더 작성.
+
+LayoutManager : 컴포넌트 배치 관리자.
+
+1. FloaLayout : Panel 계열에 디폴트 이다.
+2. BorderLayout : Window 계열에 디폴트 이다.
+3. GridLayout :동일한 격자 모양으로 배치한
+4. GridBagLayout :컴포넌트를 다양한 크기로 배치.
+5. CardLayout : 카드식으로 컴포넌트를 배치.
+6. null   : 프로그래머가 직접 컴포넌트 크기, 위치를 지정해준다.
+
+=====================
+FloaLayout
+=====================
+BorderLayout
+=====================
+GridLayout
+=====================
+GridBagLayout
+=====================
+CardLayout
+=====================
+null 
+=====================
+Test01_FlowLayout.java
+Test02_BorderLayout.java
+Test03_GridLayout.java

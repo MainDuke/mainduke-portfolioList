@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>회원가입</h1>
+<form action="exam.jsp" method="post">
+
+<div class="idpwd">
+<label for="id">ID</label>
+<input type="text" name="id" id="id"/>
+<input type="button" value="ID중복체크" onClick="함수호출()" >
+<br>
+<label>PWD</label>
+<input type="password" name="pwd" id="pwd">
+</div>
+
+<fieldset>
+<legend>성별</legend>
+<label>
+<input type="radio" name="gender" id="gender" value="male">남
+</label>
+<label>
+<input type="radio" name="gender" id="gender" value="female">여
+</label>
+</fieldset>
+
+<fieldset>
+<legend>취미</legend>
+<label for="reading">독서</label>
+<input type="checkbox" name="reading" id="reading">
+<label for="travel">여행</label>
+<input type="checkbox" name="travel" id="travel">
+<label for="excise">운동</label>
+<input type="checkbox" name="excise" id="excise">
+<label for="music">음악</label>
+<input type="checkbox" name="music" id="music">
+
+</fieldset>
+
+<label for="photo">사진</label>
+<input type="file" name="photo" id="photo"><br><br>
+
+
+<label>전공</label>
+<select name="major" id="">
+<optgroup label="인문대">
+	<option value="국어">국어</option>
+	<option value="사회">사회</option>
+	<option value="역사">역사</option>
+</optgroup>
+<optgroup label="이공대">
+	<option value="화학">화학</option>
+	<option value="기계">기계</option>
+	<option value="전자">전자</option>
+</optgroup>
+</select>
+<br><br>
+
+
+
+
+</form>
+
+</body>
+</html>

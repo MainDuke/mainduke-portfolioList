@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="10_input_button.jsp">
+	<label for="no">갯수</label>
+	
+	<input type="number" min="0" max="20" step="2" required="required" name="cnt"  id="kk">
+	<br>
+	<input type="date" required="required" name="date"  id="k2">
+	<br>
+	<input type="datetime-local" required="required" name="birthday2"  id="ll2">
+	
+	<br>
+	1직접 데이터 입력
+	datetime: <input type="datetime" required="required" name="birthday3"  id="k3">
+	
+	<br>
+	2직접 데이터 입력
+	<p><time>2016-03-11</time></p>
+	 <time datetime="yyyy년 MM월 DD일 Thh:mm:ssz"">2016-03-11</time>
+	<br><br>
+	
+	<input type="submit" value="제출">
+	
+	</form>
+
+</body>
+</html>

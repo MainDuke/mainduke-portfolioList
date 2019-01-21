@@ -1,0 +1,332 @@
+ch10_package.txt
+
+- 패키지 : 기능이 유사한 class, interface 를 모아 놓은 것을 말한다 
+- 패키지 => 폴더 
+- import java.awt.*;
+
+
+- 패키지를 사용한 이유는 class 이름상의 충돌을 방지 시켜준다 
+  java.util.Date // java.util.Date date=new java.util.Date();
+  java.sql.Date
+  java.sql.*;
+  // Data date=new Date();
+
+
+- 패키지는 여러 클래스의 집합체로서 , package 문으로 선언 한다 
+  패키지이름   : 소문자
+  변수         : 첫글자 소문자, 이후에는 단어 위주로 첫글자 대문자 
+  메소드       : 첫글자 소문자,    "
+  클래스       : 첫글자 대문자 ,   "
+=======================
+형식
+=======================   
+package 패키지이름;
+package hong.kil.dong;
+
+import java.awt.*;
+import java.awt.event.*;
+  
+class 클래스이름
+  {
+  	//변수
+  	//생성자
+  	//메서드
+  }
+=======================
+●실습
+
+c:\aa 만들어 준다 
+c:\aa\prod 만들어 준다 
+
+Jpadpro 실행한다(메모장 사용해도 된다)
+
+c:\aa\prod\Product.java 작성한다 
+------------------------------------
+package prod;
+
+public class Product
+{
+  //필드 
+  double displacement=1000.0;
+  int price=1500;//가격
+  
+  //메서드 
+  public void disp(){
+    String msg="자동차 정보 입니다 ";
+    System.out.println(msg);
+    System.out.println("배기량:"+displacement);
+    System.out.println("가 격 :"+price);
+  }//disp() end 
+
+}//class end 
+//컴파일만 합니다 
+
+------------------------------------
+c:\aa\Test01_package.java
+------------------------------------
+
+import prod.Product;
+//import prod.*;
+
+class Test01_package
+{
+  public static void main(String args[]){
+    Product p=new Product();
+    p.disp();
+  }//main end
+
+}//class end 
+//컴파일하고
+//실행 
+실습1 --- 끝
+
+●실습2 --- 시작
+
+c:\aa\bb\cc 만든다 
+
+c:\aa\bb\cc\Product2.java
+-----------------------------------
+package bb.cc;
+
+public class Product2
+{
+  public void disp(){
+    System.out.println("오늘은 목요일 입니다 ");
+  }//disp end 
+
+}//class end 
+//컴파일만 
+
+-----------------------------------
+c:\aa\Test02_package.java
+-----------------------------------
+
+import bb.cc.Product2;
+
+class Test02_package
+{
+  public static void main(String args[]){
+    Product2 p=new Product2();
+    p.disp();
+    
+    //컴파일
+    //실행 
+  }//main end 
+
+}//class end 
+
+--실습2 --끝
+
+●실습3
+c:\aa\abc 만든다 
+
+c:\aa\abc\AA.java 저장만
+c:\aa\abc\BB.java 저장만
+c:\aa\abc\CC.java 저장만
+c:\aa\abc\DD.java 저장만
+
+-------------------------------
+c:\aa\abc\AA.java 
+-------------------------------
+package pp;
+
+public class AA
+{
+  public void aa(){
+    System.out.println("AAA");
+  }//aa() end
+}//class end 
+//저장만 합니다 
+
+-------------------------------
+c:\aa\abc\BB.java  
+-------------------------------
+package pp;
+
+public class BB
+{
+  public void bb(){
+    System.out.println("BBB");
+  }//bb() end
+
+}//class end 
+//저장만 합니다 
+
+-------------------------------
+c:\aa\abc\CC.java 
+-------------------------------
+package pp;
+
+public class CC
+{
+  public void cc(){
+    System.out.println("CCC");
+  }//cc() end
+
+}//class end
+//저장만 합니다 
+
+-------------------------------
+c:\aa\abc\DD.java 
+-------------------------------
+
+package pp;
+
+public class DD
+{
+  public static void main(String args[]){
+    
+    AA a=new AA();
+    BB b=new BB();
+    CC c=new CC();
+    
+    a.aa();
+    b.bb();
+    c.cc();
+  }//main end
+}//class end 
+
+// 저장만 합니다 
+// cmd 창 열고 
+// c:\aa\abc>
+-------------------------------
+
+C:\aa\abc>javac -d . *.java
+
+javac :        컴파일 
+  
+-d : 자동으로 디렉토리(패키지)를 만든다
+
+.  : current(현재)경로
+
+*.java : 모든 java파일을 컴파일 합니다 
+
+
+C:\aa\abc>java pp.DD    ..... 실행 
+
+AAA
+BBB
+CCC
+
+실습3 --- 끝
+
+● 실습4
+c:\aa\mm 만들고 
+
+c:\aa\mm\CalcTest.java  저장만
+c:\aa\mm\CalcTest2.java  저장만
+-----------------------------------
+c:\aa\mm\CalcTest.java
+-----------------------------------
+package hong.kil.dong;
+
+public class CalcTest
+{
+  public CalcTest(){}//생성자 
+  
+  public void hab(int a,int b){
+    System.out.println("합:"+(a+b));
+  }//hab() end 
+
+}//class end 
+//저장만 합니다 
+//cmd 창
+//c:\aa\mm>
+
+
+-----------------------------------
+c:\aa\mm\CalcTest2.java
+-----------------------------------
+package hong.kil.dong;
+
+public class CalcTest2
+{
+  public CalcTest2(){}//생성자 
+  
+  //메서드
+  public void cha(int a,int b){
+    System.out.println("차:"+(a-b));
+  }//cha() end 
+
+}//class end 
+//저장만 합니다 
+
+
+-----------------------------------
+C:\aa\mm>javac -d . *.java
+
+C:\aa\mm>jar -cvf hong.jar hong
+
+jar  : 압축 
+-cvf :
+ -c  새 아카이브를 생성합니다.
+ -v  표준 출력에 상세 정보 출력을 생성합니다.
+ -f  아카이브 파일 이름을 지정합니다.
+
+dos>jar
+
+hong.jar  : 압축파일 이름 
+hong      : 최상위 패키지 
+
+
+C:\aa\mm\hong.jar 를
+C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\ 여기에 복사 
+hong.jar 복사 
+
+hong.jar 는 어디서나 사용해도 된다 
+
+===사용
+
+C:\01_java\ch10_package\ 여기 에서 실습 
+
+Test05_package.java
+--------------------------------
+import hong.kil.dong.*;
+
+
+class Test05_package
+{
+  //변수
+  CalcTest t1;
+  CalcTest2 t2;
+  
+  //생성자
+  public Test05_package(){
+    t1=new CalcTest();
+    t2=new CalcTest2();
+    
+    t1.hab(3,5);
+    t2.cha(7,5);
+      
+  }//생성자 end 
+  //메서드 
+  public static void main(String args[]){
+      new Test05_package();
+  }//main
+}//class
+//컴파일 실행 
+
+끝
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

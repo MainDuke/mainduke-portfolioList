@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/cglib-nodep-2.2.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/commons-pool-1.5.6.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/jstl-api-1.2.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/jstl-impl-1.2.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/mysql-connector-java-5.1.11-bin.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.aop-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.asm-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.beans-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.context-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.core-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.expression-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.jdbc-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.transaction-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.web-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/org.springframework.web.servlet-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/14_spring_lib/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="classes"/>
+	<classpathentry kind="lib" path="xml"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

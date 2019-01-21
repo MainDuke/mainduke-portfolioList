@@ -1,0 +1,20 @@
+{
+  "name": "ssu_sp_server_test",
+  "version": "1.0.0",
+  "description": "mainduke make server for ssu_sp_server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mainduke",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "4.16.4",
+    "fs": "0.0.1-security",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0"
+  }
+}

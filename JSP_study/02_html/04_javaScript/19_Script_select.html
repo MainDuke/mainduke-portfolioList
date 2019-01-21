@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function ss(){
+
+	
+m=document.myform.job.options.selectedIndex; //선택된 인덱스 번호.
+if (m==0) {
+	alert("선택하지 않았습니다.");
+}else{
+alert("선택 된 인덱스 번호 selectedIndex :" +m);
+
+m2=document.myform.job.options[m].text;
+m3=document.myform.job.options[m].value;
+
+alert(" 선택된 text : "+m2+"\n 선택된 value : "+m3);
+}
+
+}//ss end
+
+function add(){
+	
+	b1=document.myform.t1.value; //text
+	b2=document.myform.t1.value; //value
+	num = document.myform.job.options.length;
+	document.myform.job.options[num]= new Option(b1, b2);
+	document.myform.t1.value="";	
+}//add end
+
+function del(){
+	m=document.myform.job.options.selectedIndex;
+	if (m!=0) {
+		document.myform.job.options[m]=null;
+	}
+	
+}//del end
+
+</script>
+
+</head>
+<body>
+
+
+<h1 align=center>좋아하는 과일 선택하시오.</h1>
+
+<form name="myform"  action=""  method="get">
+
+	<select name="job">
+		<option selected>선택하시오.
+		<option value="student">학생
+		<option value="housekeeper">주부
+		<option value="clerk">회사원
+		<option value="publishman">공무원
+		<option value="busnisman">자영업
+	<option value="president">사장
+	</select>
+	
+	
+<input type="button"  value="버튼"  onClick="ss()">
+<input type="text"  name="t1">
+<input type="button"  value="추가"  onClick="add()">
+<input type="button"  value="삭제"  onClick="del()">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+ch20 회원관리 시스템
+
+use ch20;
+
+drop table member
+
+create table member(
+id varchar(12) primary key not null,
+password varchar(12) not null,
+name varchar(10) not null,
+
+jumin1 varchar(6) not null,
+jumin2 varchar(7) not null,
+
+email varchar(30),
+zipcode varchar(7),
+addr varchar(50),
+
+job varchar(30),
+blog varchar(50),
+regdate date not null
+);
+
+create table zipcode(
+zipcode char(7) not null,
+area1 char(10),
+area2 char(20),
+area3 char(40),
+area4 char(20)
+);
+
+==============================================
+member.LoginDto.java
+member.ZipcodeDto.java
+member.LoginDao.java
+==============================================
+ch23_member
+	inputForm.jsp ===> inputPro.jsp
+	confirmId.jsp (id 중복  체크)
+	ZipCheck.jsp (동을 입력하면 주소 자동 입력)
+
+
+

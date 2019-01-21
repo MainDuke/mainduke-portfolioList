@@ -1,0 +1,34 @@
+create table board(
+num int(11) auto_increment primary key,
+name varchar(20) not null,
+email varchar(30),
+homepage varchar(30),
+subject varchar(30) not null,
+content text,
+pos int(11),
+depth smallint(5),
+regdate date,
+pass varchar(20),
+count smallint(5) default 0,
+ip varchar(20)
+);
+
+테이블 프로퍼티 use mydb1;
+
+boardre.BoardBean.java (모델빈)
+boardre.BoardMgr.java (비즈니스 로직)
+
+Post.jsp
+PostProc.jsp
+
+List.jsp
+Read.jsp
+
+Update.jsp
+UpdateProc.jsp
+
+Delete.jsp
+
+Reply.jsp
+ReplyProc.jsp
+

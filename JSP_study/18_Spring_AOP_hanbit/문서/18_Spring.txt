@@ -1,0 +1,18 @@
+sample1.MessageBean.java 인터페이스
+sample1.MessageBeanImpl.java 구현클래스
+sample1.MessageAdvice.java 어드바이스
+
+xml/beans.xml
+
+sample1.HelloAppClient.java 클라이언트 실행
+
+
+=========================================================
+
+sample2.MessageBean.java 인터페이스
+sample2.MessageBeanImpl.java 구현클래스
+sample2.MessageAdvice.java 어드바이스
+
+xml/beans2.xml
+
+sample2.HelloAppClient.java 클라이언트 실행

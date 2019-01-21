@@ -1,0 +1,45 @@
+1. web.xml
+
+2. WEB-INF / applicationContext.XMl (DB 설정, 빈 등록)
+
+3. WEB-INF / shopping-2-servlet.xml
+
+4.Item.java 모델빈
+
+5.
+ItemDao.java	=== ItemDaoImpl.java
+ItemCataLog.java  --- ItemCatalogImpl.java
+Shop.java === ShopImpl.java
+
+6. controller.IndexController.java (리스트)
+	controller.DetailController.java (상세보기)
+
+7.
+WebContent/css
+WebContent/img
+
+8.
+WEB-INF / jsp/jsp_header.jsp
+WEB-INF / jsp/index.jsp (리스트) : 상세보기
+WEB-INF / jsp/detail.jsp : 상세보기
+
+
+
+create table if not exists user_account(
+user_id integer(5) auto_increment,
+user_name varchar(20),
+password integer(6),
+postcode varchar(50),
+address varchar(20),
+email varchar(20),
+jop varchar(20),
+birthday varchar(20),
+primary key (user_id)
+);
+
+
+delete from item;
+load data local infile 'c:\\shopping\\user.csv' 
+into table user_account
+fields terminated by ','
+lines terminated by '\r\n';

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<!-- 빈 상속과 추상화, /// 1. 빈 등록 , computer -->
+
+	<bean id="pc1" class="com.zeroad.spring.model.product.Computer">
+		<constructor-arg value="PC-22"></constructor-arg>
+		<property name="cpu" value="i7"></property>
+		<property name="memory" value="2g"></property>
+		<property name="disk" value="100GB"></property>
+	</bean>
+
+<!-- 2. 상속을 받는다. -->
+
+<bean id="note1" parent="pc1" class="com.zeroad.spring.model.product.Notebook">
+	<property name="battery" value="최신형"/> <!-- set 작업 -->
+</bean>
+
+
+<!-- 3. pc1 상속 -->
+
+<bean id="pc2" parent="pc1">
+	<property name="memory" value="4G"/> 
+</bean>
+
+<!--
+4. property 추상화 -->
+
+
+<bean id="baseSpec" abstract="true">
+	<property name="cpu" value="i7-최고"></property>
+		<property name="memory" value="8G"></property>
+		<property name="disk" value="1000GB"></property>
+</bean>
+
+<!-- 5. baseSpec 상속-->
+
+<bean id="note2" parent="baseSpec" class="com.zeroad.spring.model.product.Notebook">
+	<constructor-arg value="NB-2"/>
+	<property name="battery" value="구형배터리"/>
+	
+</bean>
+
+
+</beans>

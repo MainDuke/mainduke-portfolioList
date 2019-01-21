@@ -1,0 +1,111 @@
+bin>mysql -u root -p
+12345
+
+use ch20;
+
+drop table board3;
+
+create table board3(
+num int not null primary key auto_increment,
+writer varchar(10) not null,
+email varchar(30),
+
+subject varchar(50) not null,
+passwd varchar(12) not null,
+regdate TimeStamp,
+
+readcount int default 0,
+
+ref int not null,
+re_step smallint not null,
+re_level smallint not null,
+
+content text not null,
+ip varchar(20)
+);
+
+alter table board3 modify regdate Timestamp;
+alter table board3 modify regdate datetime; <- 수정
+
+desc board3;
+
+-----설명
+reate table board3(
+num int not null primary key auto_increment, // 글번호 p.k
+writer varchar(10) not null, // 글쓴이
+email varchar(30), // 이메일
+
+subject varchar(50) not null, // 글제목
+passwd varchar(12) not null, // 암호
+regdate TimeStamp, // 날짜
+
+readcount int default 0, // 조회수
+
+ref int not null, // 답글 그룹
+re_step smallint not null, // 글 순서(원글과 답글 순서 처리)
+re_level smallint not null, // 글 깊이(답글 레벨)
+
+content text not null, // 글 내용
+ip varchar(20) //ip
+);
+
+============================
+오라클 테이블, 시쿼스, 작성
+============================
+dos>sqlplus scott/tiger
+
+create sequence board3_seq;
+============================
+drop table board3;
+
+create table board3(
+num number(4) primary key,
+writer varchar2(10) not null,
+email varchar2(30),
+subject varchar2(50) not null,
+passwd varchar2(12) not null,
+regdate date,
+readcount number(4) default 0,
+ref number(4) not null,
+re_step number(4) not null,
+re_level number(4) not null,
+content varchar2(4000) not null,
+ip varchar2(20));
+
+============================
+
+desc board3;
+
+select * from tab; //테이블들 보기 
+
+쓰레기통 지우기
+
+purge recyclebin;
+
+============================
+src/
+boardmysql.BoardDto.java
+	   BoardDao.java
+============================
+writeForm.jsp : 원글, 답글
+wirtePro.jsp
+list.jsp
+
+content.jsp 글 내용 보기
+
+updateForm.jsp / updatePro.jsp 글 수정
+deleteForm.jsp / deletePro.jsp 글 삭제
+
+
+
+
+
+
+
+
+
+
+
+
+
+

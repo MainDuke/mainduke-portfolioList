@@ -1,0 +1,97 @@
+@CHARSET "EUC-KR";
+
+html, body, form, fieldset, legend, ol, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fff;
+	color: #111;
+	font-family: "¸¼Àº°íµñ", "±¼¸²", "µ¸¿ò";
+	padding: 20px;	
+}
+form {
+    background: #aa0;
+    
+	-moz-border-radius: 5px; /* firefox */
+	-webkit-border-radius: 5px;/* Safari,Chrome*/
+	border-radius: 5px;
+	
+	counter-reset: fieldsets;
+	padding: 20px;
+	width: 350px;	
+}
+
+form fieldset {
+	border: none;
+	margin-bottom: 10px;
+}
+form fieldset:last-of-type {
+	margin-bottom: 0;
+}
+ 
+form legend {
+	color: #384313;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 1px #c0d576;
+}
+form > fieldset > legend:before {
+	content: "Step " counter(fieldsets) ": ";
+	counter-increment: fieldsets;
+}
+
+form ol li {
+	background: #b9cf6a;
+	border-color: #e3ebc3;
+	border-style: solid;
+	border-width: 2px;
+	
+	-moz-border-radius: 5px;/*Firefox*/
+	-webkit-border-radius: 5px;/*Safari ,Chrome*/
+	border-radius: 5px;
+	
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+
+form label {
+	float: left;
+	font-size: 13px;
+	width: 110px;
+}
+form input:not([type=radio]) {
+	background: #fff;
+	border: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font: italic 13px "¸¼Àº°íµñ", "±¼¸²", "µ¸¿ò";
+	outline: none;
+	padding: 5px;
+	width: 200px;
+}			
+
+form button {
+	background: #384313;
+	border: none;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	color: #fff;
+	display: block;
+	font: 16px "¸¼Àº°íµñ", "±¼¸²", "µ¸¿ò";
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000;
+	text-transform: uppercase;
+}
+form button:hover {
+	background: #1e2506;
+	cursor: pointer;
+}

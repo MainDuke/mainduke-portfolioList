@@ -1,0 +1,21 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function setWidth() {
+			var st = document.getElementById("box");
+			st.style.width = "100px";
+			st.style.width = (parseInt( st.style.width ) + 100) + "px";
+		}
+	</script>
+
+	<style>
+		#box { width:50px; height:50px; }
+	</style>
+</head>
+
+<body>
+	<button onclick="setWidth()">setWidth</button>
+	
+	<div id="box" style="background-color:#CCC;"></div>
+</body>
+</html>

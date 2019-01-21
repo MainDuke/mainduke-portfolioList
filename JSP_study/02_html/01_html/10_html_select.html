@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+			
+			<form method="get" action="../02_jsp/03_aa.jsp">
+			
+			<table border="1">
+			
+			<tr>
+					<td>ID</td>
+					<td>
+					<input type="text" name="id">
+					<input type="hidden" name="name" value="박문수"><!-- html 에서는 안 보인다. -->
+					</td>
+								
+			</tr>
+			
+			<tr>
+			<td>당신의 취미를 선택하시오.</td>
+			<td>
+					<select name="hobby" size="3" multiple><!-- java의 List와 유사 -->
+							<option value="여행">여행</option>
+							<option value="트래킹">트래킹</option>
+							<option value="산행">산행</option>
+							<option value="공부">공부</option>
+							<option value="축구">축구</option>
+							<option value="티비">티비</option>
+								
+					</select>
+					</td>
+			</tr>
+			
+			
+			<tr>
+					<td>사용중인 컴퓨터 하드웨어</td>
+					<td>
+					<select name="hw">
+							<option value="pentium">pentium</option>
+							<option value="intel.corei3">intel.corei3</option>
+							<option value="intel.corei5">intel.corei5</option>
+							<option value="intel.corei7">intel.corei7</option>
+											
+					</select>
+			</td>
+			</tr>
+			
+				<tr>
+					<td colspan="2" align="center">
+							<input type="submit" value="전송">&nbsp;
+							<input type="reset" value="취소">
+							
+					</td>
+				</tr>
+				
+			</table>
+	</form>
+
+
+</body>
+</html>

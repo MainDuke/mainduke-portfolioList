@@ -1,0 +1,25 @@
+DB ÀÛ¾÷
+
+
+use userdb;
+
+drop table user;
+create table user(
+userId varchar(20) primary key,
+userPw varchar(20),
+userName varchar(20),
+wdate datetime);
+
+insert into user value('kim', 'kim123','±è±è', now());
+insert into user value('lee', 'lee123','ÀÌÀÌ', now());
+insert into user value('park', 'park123','¹Ú¹Ú', now());
+
+
+src/dbconnect.properties
+
+src/SqlMapConfig.xml
+
+src/model/User.java ¸ğµ¨ºó
+src/User.xml
+src/client.IBatiesClient.java Äõ¸® ½ÇÇà ÇÏ±â.
+

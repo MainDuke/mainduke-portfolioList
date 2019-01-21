@@ -1,0 +1,52 @@
+1. 래퍼 클래스 () : 기본 자료형 클래스를 랩퍼 클래스 라고 한다.
+2. HashTable
+3. Calendar, Date
+4. String , StringBeffer
+
+5. Vector
+6. StringTokenizer , Sring.split()
+7. Properies
+
+8. Object 메서드들
+9. String
+
+1.래퍼 클래스(WrapperClass) : 기본 자료형 클래스를 랩퍼 클래스 라고 한다.
+
+기본자료형 WrapperClass
+boolean		Boolean
+byte		Byte
+char		Char
+int		Int
+long		Long
+float		Float
+double		Double
+
+
+
+
+2. HashTable : 검색이 빠르다
+		검색이 용이하다.
+==-------------------------------
+key 	value
+
+==-------------------------------
+"id"	"kim"
+"pwd"	"123"
+"name"	"홍길동"
+
+==-------------------------------
+
+HashTable 메서드들
+
+
+Object put(Object key, Object value)
+	>>해쉬테이블에 저장.
+Object get(Object key)
+	>>해쉬테이블에서 값을 얻는다.
+Object remove(Object key)
+	>>key에 해당하는 값을 제거.
+
+int size() => 해쉬 테이블의 key 갯수를 얻는다.
+
+
+

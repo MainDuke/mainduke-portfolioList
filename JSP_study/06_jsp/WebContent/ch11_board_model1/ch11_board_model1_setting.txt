@@ -1,0 +1,57 @@
+예제 DB 세팅
+
+create database mydb1;
+use mydb1;
+
+create table Myboard(
+num int not null auto_increment primary key,
+wirter varchar(20) not null,
+subject varchar(30) not null,
+email varchar(30) not null,
+content text not null,
+pwd varchar(8) not null,
+wdate date,
+readcount int unsigned default 0,
+ip varchar(20)
+);
+
+==============설명
+========================================================
+create table Myboard(
+
+num int not null auto_increment primary key, 기본키
+
+auto_increment : 일련번호 자동으로 부여한다.
+오라클의 시퀀스 와 같다.
+
+writer varchar(20) not null, 글쓴이
+subject varchar(30) not null, 글제목
+email varchar(30) not null, 이메일
+content text not null, 글내용
+pwd varchar(8) not null, 암호
+wdate date, 날짜
+readcount int unsigned default 0, 조회수
+ip varchar(20) 클라이언트 IP 저장 하려고
+);
+
+========================================================
+
+ch11_board_model1
+
+Write.jsp 입력폼
+WriteSave.jsp DB에 저장
+List.jsp 글 목록 보기
+Content.jsp.... 글 내용 보기
+
+Edit.jsp 글 수정 폼
+EditSave.jsp DB 수정
+
+Delete.jsp  삭제 폼
+DeleteSave.jsp  DB에서 삭제
+
+===========================================
+
+List.jsp----- Write.jsp
+		------Content.jsp ----- Edit.jsp
+									Delete.jsp
+									

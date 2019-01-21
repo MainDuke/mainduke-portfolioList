@@ -1,0 +1,25 @@
+mysql> create database spring
+
+use spring
+
+create table orderinfo(
+ordNo integer not null,
+ordName varchar(20) not null,
+rcvName varchar(20) not null,
+delvAddr varchar(50) not null,
+delvTel varchar(20) not null,
+orderDate date,
+primary key (ordNo)
+);
+
+
+create table orderitem(
+
+itemSeq integer auto_increment,
+ordNo integer references orderinfo(ordNo),
+prdName varchar(20) not null,
+cnt varchar(20) not null,
+price integer not null,
+primary key (itemSeq)
+
+);

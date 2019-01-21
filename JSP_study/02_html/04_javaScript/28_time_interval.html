@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function aa(){
+	today = new Date();
+	m="";
+	switch (today.getDay()) {
+	case 0:	day="일요일"; break;
+	case 1:	day="월요일"; break;
+	case 2:	day="화요일"; break;
+	case 3:	day="수요일"; break;
+	case 4:	day="목요일"; break;
+	case 5:	day="금요일"; break;
+	case 6:	day="토요일"; break;
+	}//switch
+	
+	m+=day+" ";
+	m=m+today.getHours()+":"
+	+today.getMinutes()+":"
+	+today.getSeconds();
+		
+	document.write(m);
+	window.status=m; //날짜 시간을 상태바에 표시.
+	
+}//time end
+</script>
+</head>
+<body onLoad="setInterval('aa()',1000)"> <!-- 1초마다 호출 -->
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+애플릿
+
+public class Test extends Applet{
+
+변수
+public void init{}
+창종료 필요없음
+메서드(){
+main() 필요없음
+}
+//컴파일
+//.html 만들어서 애플리 코드 넣고.
+//.html을 실행한다.

@@ -1,0 +1,12 @@
+select b.*, r.no from book b , rent r 
+where r.memNo='1' and r.no=b.no;
+
+
+where b.no=select no from rent where memNo='1'
+
+DATE_FORMAT((r.rentdate)+7,'%Y-%m-%d'))
+select b.*, if(ifnull(r.rentdate,0)=0,'',DATE_FORMAT((r.rentdate)+7,'%Y-%m-%d')) as returnday from book b, rent r 
+where r.memNo='1' and r.no = b.no
+
+
+update rent set memNo='', rentdate= null, rentable='대여가능' where no ='010112'

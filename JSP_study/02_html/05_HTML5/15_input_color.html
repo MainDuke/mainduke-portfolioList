@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function color(){
+	id=document.getElementById("mycolor");
+	alert("color:"+id.value);
+}
+
+function color2(){
+	alert("color2 : "+document.myform.mycolor.value);
+}
+
+function bodybgColor(){
+	id=document.getElementById("mycolor");
+	body1=document.getElementsByTagName("body")[0];
+	
+	
+	
+	body1.style.backgroundColor=id.value;
+}
+function test(){
+
+	alert(document.getElementsByTagName("body"));
+	
+}
+function tablebgColor(){
+	id=document.getElementById("mycolor");
+	document.getElementsByTagName("table")[0].style.backgroundColor=id.value;
+//getElementsByTagName(객체)[] , 타겟이 된 객체로 검색된 모든 태그들을 오브젝트에 받는다. [] 안에 값을 넣어 몇번째 데이터인지 설정 가능하다.
+
+}
+
+</script>
+
+</head>
+<body>
+	<form name="myform" action="10_input_button.jsp">
+	<label for="mycolor" >좋아하는 색은?</label>
+	<input type="color" id="mycolor" name="mycolor" required="required"> 
+	
+	<input type="button" value="color()호출" onclick="color()">
+	<input type="button" value="color2()호출" onclick="color2()">
+	<input type="button" value="bodybgColor호출" onclick="bodybgColor()">
+	<input type="button" value="tablebgColor" onclick="tablebgColor()">
+	<input type="button" value="test" onclick="test()">
+	<input type="submit" value="서버로 제출" >
+	
+	
+	<br>
+	<table border=1>
+	<td>
+	이름
+	</td>
+	<td>
+	XXX
+	</td>
+	
+	</table>
+	<br>
+		<table border=1>
+	<td>
+	이름
+	</td>
+	<td>
+	XXX2222
+	</td>
+	
+	</table>
+
+</form>
+
+</body>
+</html>

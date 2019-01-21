@@ -1,0 +1,37 @@
+22_Spring_shopping_1
+
+web.xml
+
+lib/*.java
+
+shop.java ------ ItemCatalog.java ------------ ItemDao.java
+
+IndexController.java (Action)
+
+1.DB 작업
+2.web.xml 수정 -servlet 작성
+3. Item.java 모델빈
+	ItemDao.java (인터페이스)
+	ItemDaoImpl.java (비즈니스 로직)
+
+4. ItemCatalog.java   인터페이스
+	ItemCatalogImpl.java 구현 클래스
+	
+5. Shop.java 인터페이스
+	ShopImpl.java 구현 클래스
+
+6. IndexController.java (Action 해당.)
+
+======================================================
+1.
+
+create table if not exists item(
+item_id integer(5) auto_increment,
+item_name varchar(20),
+price integer(6),
+description varchar(50),
+picture_url varchar(20),
+primary key (item_id)
+);
+
+

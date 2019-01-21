@@ -1,0 +1,517 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:굴림;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:굴림;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:"\@굴림";
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:"\@바탕";
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:굴림;}
+h1
+	{mso-style-link:"제목 1 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:굴림;
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"머리글 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:굴림;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"바닥글 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:굴림;}
+span.1Char
+	{mso-style-name:"제목 1 Char";
+	mso-style-link:"제목 1";
+	font-family:"맑은 고딕";}
+span.Char
+	{mso-style-name:"머리글 Char";
+	mso-style-link:머리글;
+	font-family:굴림;}
+span.Char0
+	{mso-style-name:"바닥글 Char";
+	mso-style-link:바닥글;
+	font-family:굴림;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:3.0cm 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=KO style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>제10장&nbsp; Layout_문서.rtf&nbsp;
+</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:20.0pt'>LayoutManager</span></b><b><span
+style='font-size:10.0pt'> :<span style='color:blue'> 컨포넌트 배치 관리자 </span></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>1. FlowLayout :&nbsp; <span
+style='color:red'>Panel</span> 계열의 <span style='color:red'>디폴트</span> 이다 (
+Panel , Applet )</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>2. BorderLayout : <span
+style='color:red'>Window</span> 계열의 <span style='color:red'>디폴트</span> 이다 (
+Frame , Dialog, FileDialog)</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>3. GridLayout : 동일한 격자 모양으로
+배치 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>4. GridBagLayout : 컴포넌트를 다양한
+크기로 배치 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>5. CardLayout : 카드식으로 컴포넌트
+배치 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>6. null&nbsp; : 프로그래머가 직접 컴포넌트
+크기와 위치를 지정해 준다 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:15.0pt;color:blue'>FlowLayout</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;color:navy'>-&nbsp;&nbsp;
+Panel과 Applet 의 디폴트 Layout 이다 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;color:navy'>-&nbsp;&nbsp;
+FlowLayout 특징 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;&nbsp; 컨테이너크기를 사용자가 변경하였을때
+, 컴포넌트 크기는 변화지 않고 상대적인 위치만 변한다</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>- 만약 Panel 계열이 아닌 컨테이너에
+FlowLayout 을 적용하려면</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>컨테이너 클래스의 setLayout()메소드에
+FlowLayout 형 오브젝트를 넘겨 주어야한다 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt'>Frame f;</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:navy'>f.setLayout(new
+FlowLayout());</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;color:navy'>- FlowLayout 생성자</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;1.&nbsp; public
+FlowLayout()</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+가운데 정렬 , 컴포넌트 간의 수평/수직 거리는 5픽셀인 FlowLayout를 생성한다 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;</span></b><b><span
+lang=EN-US style='font-size:10.0pt'>2.&nbsp; public FlowLayout(int align, int
+hgap, int vgap)</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><b><span style='font-size:10.0pt'>FlowLayout.LEFT : 왼쪽정렬</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FlowLayout.RIGHT : 오른쪽정렬</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FlowLayout.CENTER : 가운데정렬</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+hgap :&nbsp;&nbsp; 컴포넌트의 수평 거리 ( 픽셀 단위 이다 )</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+vgap :&nbsp;&nbsp; 컴포넌트의 수직 거리 </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>&nbsp;</span></b></p>
+
+<h1 style='text-align:justify;text-justify:inter-ideograph;page-break-after:
+avoid'><b><span lang=EN-US style='font-size:20.0pt;font-family:"Times New Roman","serif"'>BorderLayout
+</span></b></h1>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>1. BorderLayout은 Window 계열
+Container에 <span style='background:yellow'>기본적</span>으로 적용되는 LayoutManager이다</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>2. 당연히 Window클래스의 하위 클래스인 <span
+style='background:yellow'>Frame</span>클래스의 경우에도 특별히 LayoutManager를 변경하지 않는한 <span
+style='background:yellow'>BorderLayout</span>이 적용된다</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>3. BorderLayout특징 : Container의
+크기를 사용자가 변경시키면 </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Component의 상대적인 위치는 변하지 않고 <span style='background:yellow'>크기만 변</span>한다</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>4. 따라서 BorderLayout이 적용된
+Container의 경우는</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>Component를 Frame의 어느 위치에&nbsp;
+붙일것인지 add()메소드에 다음과 같이 지정한다</span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:1.9pt;border-collapse:collapse;border:none'>
+ <tr style='height:16.9pt'>
+  <td width=99 style='width:73.95pt;border:solid windowtext 1.0pt;padding:0cm 4.95pt 0cm 4.95pt;
+  height:16.9pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>c1.add(c2,n);</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:12.0pt'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>c1&nbsp;
+: BorderLayout이 적용될 <span style='background:yellow'>Container</span>오브젝트</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:12.0pt'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>c2&nbsp;
+: Container붙일 <span style='background:yellow'>Component</span>오브젝트</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:12.0pt'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>n&nbsp;
+: 붙일 <span style='background:yellow'>위치</span>를 나타내는 상수</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:12.0pt'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:-3.7pt;border-collapse:collapse;border:none'>
+ <tr style='height:15.0pt'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  padding:0cm 4.95pt 0cm 4.95pt;height:15.0pt'>
+  <p class=MsoNormal style='margin-left:3.7pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  n</span></b></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 4.95pt 0cm 4.95pt;height:15.0pt'>
+  <p class=MsoNormal style='margin-left:26.9pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>의미</span></b></p>
+  </td>
+  <td width=131 valign=top style='width:98.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 4.95pt 0cm 4.95pt;height:15.0pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>Container크기변경시</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:61.35pt'>
+  <td width=204 valign=top style='width:152.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 4.95pt 0cm 4.95pt;height:61.35pt'>
+  <p class=MsoNormal style='margin-left:3.7pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif";
+  background:yellow'>Borderlayout.NORTH</span></b><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:"바탕","serif"'>(=</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif";
+  background:yellow'>”</span></b><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:"바탕","serif";background:yellow'>North</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif";
+  background:yellow'>”</span></b><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:"바탕","serif"'>)</span></b></p>
+  <p class=MsoNormal style='margin-left:3.7pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>BorderLayout.SOUTH(=</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>South</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>)</span></b></p>
+  <p class=MsoNormal style='margin-left:3.7pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>BorderLayout.EAST(=</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>East</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>)</span></b></p>
+  <p class=MsoNormal style='margin-left:3.7pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>BorderLayout.WEST(=</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>West</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>)</span></b></p>
+  <p class=MsoNormal style='margin-left:3.7pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>BorderLayout.CENTER(=</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>“</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>Center</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>”</span></b><b><span
+  lang=EN-US style='font-size:9.0pt;font-family:"바탕","serif"'>)</span></b></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 4.95pt 0cm 4.95pt;height:61.35pt'>
+  <p class=MsoNormal style='margin-left:18.3pt;text-indent:-17.7pt'><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>Container&nbsp;&nbsp; 의윗쪽&nbsp;&nbsp;
+  </span></b><b><span lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>“</span></b><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  아래쪽</span></b></p>
+  <p class=MsoNormal style='margin-left:.6pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;
+  </span></b><b><span lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>“</span></b><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  오른쪽</span></b></p>
+  <p class=MsoNormal style='margin-left:2.5pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;
+  </span></b><b><span lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>“</span></b><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  왼쪽</span></b></p>
+  <p class=MsoNormal style='margin-left:4.4pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;
+  </span></b><b><span lang=EN-US style='font-size:9.0pt;font-family:"Times New Roman","serif"'>“</span></b><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp; 나머지영역</span></b></p>
+  </td>
+  <td width=131 valign=top style='width:98.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 4.95pt 0cm 4.95pt;height:61.35pt'>
+  <p class=MsoNormal style='margin-left:1.9pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>높이고정,
+  폭은변경</span></b></p>
+  <p class=MsoNormal style='margin-left:3.75pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>높이고정,
+  폭은변경</span></b></p>
+  <p class=MsoNormal style='margin-left:4.4pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>높이변경,
+  폭은고정</span></b></p>
+  <p class=MsoNormal style='margin-left:6.25pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>높이변경,
+  폭은고정</span></b></p>
+  <p class=MsoNormal style='margin-left:8.15pt;text-align:justify;text-justify:
+  inter-ideograph'><b><span style='font-size:9.0pt;font-family:"바탕","serif"'>높이,폭
+  모두 변경</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>5. 만약 Window계열이 아닌 Container를&nbsp;
+BorderLayout를 적용하려면</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>Container클래스 setLayout()메소드에
+BorderLayout형 오브젝트를 넘겨준다</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>p 핸들 변수가 가리키는 Panel의
+LayoutManager를 BoerderLayout으로 하려면</span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:1.3pt;border-collapse:collapse;border:none'>
+ <tr style='height:18.15pt'>
+  <td width=209 style='width:156.65pt;border:solid windowtext 1.0pt;padding:
+  0cm 4.95pt 0cm 4.95pt;height:18.15pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+  style='font-size:9.0pt;font-family:"바탕","serif";background:yellow'>p.setLayout(new
+  BorderLayout());</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>6. BorderLayout()생성자 :
+java.awt.BorderLayout클래스 소속</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp; 원형 : public
+BerderLayout()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* 컴포넌트 사이의 간격이 없는 BoerderLayout생성</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp; 원형 : public
+BorderLayout(int hgap, int vgap)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* 컴포넌트 사이에 지정된 간격이 있는 BorderLayout생성</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b><span
+style='font-size:9.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+<h1 style='text-align:justify;text-justify:inter-ideograph;page-break-after:
+avoid'><b><span lang=EN-US style='font-size:20.0pt;font-family:"Times New Roman","serif"'>GridLayout</span></b></h1>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>1. GridLayout은 Component를 동일한
+크기의 격자(Grid)나누어 Container 에 표시</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>2. GridLayout을 적용하려면</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>Container클래스
+메소드인 <span style='background:yellow'>setLayout</span>()메소드에 <span
+style='background:yellow'>GridLayout</span>형 오브젝트를 넘겨준다.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>예) f 핸들 변수가 가리키는Frame의
+LayoutManager를 GridLayout하려면</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:3.15pt;border-collapse:collapse;border:none'>
+ <tr style='height:43.9pt'>
+  <td width=362 valign=top style='width:271.15pt;border:solid windowtext 1.0pt;
+  padding:0cm 4.95pt 0cm 4.95pt;height:43.9pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+  style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;
+  f.setLayout(new GridLayout(3,2));</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+  style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  줄,칸</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+  style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;
+  f.setLayout(new GridLayout(0,2));</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>0은 add() 메소드를 호출한 <span
+style='background:yellow'>횟수</span>에 따라 변할 수 있다. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>add()가 6번 호줄되었다면&nbsp; 3행 2열로된다</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>3. 특징 : Container의 크기를 사용자가 변경시켰을
+때 그 위에 붙어있는 </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+각 Component의 상대적위치는 변하지 않고 <span style='background:yellow'>크기</span>만 변함</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>4. GridLayout()생성자</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>원형
+: <b>public GridLayout()</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;
+* 한 행에서 컴포넌트만큼 열이 있는 GridLayout을 실행</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>원형 <b>:
+public GridLayout(int rows, int cols)</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;
+* 지정한 <b>행, 열 수를 가진</b> GridLayout생성</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>원형 <b>:public
+GridLayout(int rows, int cols, int hgap, int vgap)</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;&nbsp;&nbsp;
+* 행수, 열수 , 수평간격, 수직 간격</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:9.75pt'><span style='font-size:10.0pt;font-family:"바탕","serif"'>throws
+</span><span lang=EN-US style='font-size:10.0pt;font-family:"Times New Roman","serif"'>…</span><span
+style='font-size:10.0pt;font-family:"바탕","serif"'>
+illegalArgumentException&nbsp; ..행,열이 지정되지 않았을 경우</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"바탕","serif"'>&nbsp;</span></b></p>
+
+</div>
+
+</body>
+
+</html>

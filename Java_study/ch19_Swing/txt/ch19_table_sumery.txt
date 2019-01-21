@@ -1,0 +1,12 @@
+mode1.setRowCount(0); 테이블 내용 삭제 
+model.addRow(rowData ); rowData 추가 
+model.removeRow(행): 행 제거 
+
+int row=table.getSelectedRow(); // 행을 얻는다
+
+table.getValueAt(행,열); 값을 얻는다
+table.setValueAt("값",행,열) : 행열에 값 설정
+
+String name=(String)table.getValueAt(row,col);
+
+table.addMouseListener();

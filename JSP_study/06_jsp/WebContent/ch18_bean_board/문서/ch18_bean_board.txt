@@ -1,0 +1,29 @@
+create database mydb1;
+use mydb1;
+
+create table Myboard(
+num int not null auto_increment primary key,
+wirter varchar(20) not null,
+subject varchar(30) not null,
+email varchar(30) not null,
+content text not null,
+pwd varchar(8) not null,
+wdate date,
+readcount int unsigned default 0,
+ip varchar(20)
+);
+
+default 0 >> ÂüÁ¶ : int sum= 0;
+================================
+src/board.BoardDto.java
+src/board.BoardDAO.java
+================================
+ch18_bean_board
+=========================
+Write.jsp > WriteSave.jsp
+
+List.jsp
+Content.jsp > List
+		Write
+		EditForm.jsp > EditSave.jsp
+		Delete.jsp

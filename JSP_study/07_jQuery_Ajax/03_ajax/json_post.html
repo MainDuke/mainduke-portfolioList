@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html_post.html</title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({
+			type : 'POST',
+			url : 'aaa2.jsp',
+			
+			//파라미터 서버로 전달
+			//data : "name=홍길동&location=서울",
+			
+			//dataType : 'JSON', // 서버가 보내준 자료 타입 
+			dataType :'html',
+			success : function(data){ // 콜백 성공 응답시 실행
+				$('div').html(data);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

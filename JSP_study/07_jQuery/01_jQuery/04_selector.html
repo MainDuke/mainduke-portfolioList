@@ -1,0 +1,59 @@
+<!-- 태그 선택 예제 jQuery & Ajax 예제 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<script type="text/javascript">
+
+$(function(){
+	
+	var $div_a=$("div#a");//변수
+	
+	//f12 클릭하고, console 탭 클릭하면 결과 볼수 있음
+	console.log("$div_a : "+$div_a);
+	console.log("$div_a.size() : "+$div_a.size());
+	console.log("$div_a.get(0) : "+$div_a.get(0));
+	
+	//var $div_a=$("div#a");
+	
+	$("span").css('color','#f00'); //모든 sap 태그 선택
+	$('#a').css('border','1px solid #f00'); //아이디 a 선택 
+	$('#b').css('border','1px solid #00f'); //아이디 b 선택
+	$('[title="classB"]').css('border','1px solid #0f0'); //title 에서 classB 선택
+	$('body').find('span').css('color','red'); //body 태그 안에서 span 태그를 찾는다.
+	
+	
+	
+});
+
+</script>
+
+
+	</head>
+	<body>
+		<div id="a">
+		
+			<div id="b" class="bclass">
+				<p title="classB">p1</p>
+				<span>span1</span>
+			</div>
+			
+			<div id="c" class="cclass">
+				<p>p2</p>
+				<span>span1</span>
+			</div>
+		
+		</div><!-- div a end -->
+	</body>
+</html>
+
+
+
+
+
+
+

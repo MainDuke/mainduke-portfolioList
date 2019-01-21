@@ -1,0 +1,101 @@
+use shopdb
+
+create table admin(
+admin_id varchar(20) not null,
+admin_passwd varchar(20) null,
+PRIMARY KEY(admin_id)
+);
+
+주문 테이블
+drop table shop_order;
+
+
+create table shop_order(
+	ordno int(5) not null auto_increment,
+	pro_no int(5) not null,
+	quantity varchar(10) null,
+	ord_date datetime,
+	state varchar(10),
+	userid varchar(10),
+	PRIMARY KEY (ordno)
+);
+
+product_no : 상품 번호
+quantity : 수량
+state : 상태 (주문 배송중)
+id : 고객id
+
+drop table shop_product;
+create table shop_product(
+no int(5) not null auto_increment,
+name varchar(20) not null,
+price varchar(10) null,
+detail text null,
+date datetime null,
+stock varchar(10) null,
+image varchar(20) null,
+PRIMARY KEY (no)
+);
+
+price 가격
+detail 상세설명
+date 상품 등록 날짜
+stock 재고
+image 상품 이미지
+ drop table shop_info;
+create table shop_info(
+pro_no int(5) not null auto_increment,
+code varchar(10),
+name varchar(20),
+price int(5),
+stock int(5),
+detail varchar(4000),
+comp varchar(20),
+reg_date datetime,
+image varchar(20),
+PRIMARY KEY (pro_no)
+);
+
+delete from shop_info;
+
+
+WebContent/imgs/ 여기서 복사
+
+insert into shop_info 
+values(0,'상품코드','상품이름',10000,100,'설명','제조회사',now(),'그림파일.jpg')
+
+insert into shop_info 
+values(0,'000001','신발1',15000,10,'신기 좋은 신발입니다.','캔버스',now(),'1.jpg');
+insert into shop_info 
+values(0,'000002','신발2',25000,10,'신상품! 신기 좋은 신발입니다.','캔버스',now(),'2.jpg');
+insert into shop_info 
+values(0,'000003','신발3',35000,10,'베스트 상품! 신기 좋은 신발입니다.','캔버스',now(),'3.jpg');
+insert into shop_info 
+values(0,'000004','신발4',55000,10,'아주 많이 팔린 상품! 신기 좋은 신발입니다.','캔버스',now(),'4.jpg');
+insert into shop_info 
+values(0,'000005','신발5',55000,10,'해외 직구입! 신기 좋은 신발입니다.','캔버스',now(),'5.jpg');
+
+
+
+2.shop.ProductBean.java (모델빈)
+3.shop.ProductMgr.java (비즈니스로직)
+
+
+
+=======================
+관리자
+=====================
+create table admin(
+admin_id varchar(20) not null primary key,
+admin_passwd varchar(20) not null
+);
+
+
+
+
+
+
+
+
+
+

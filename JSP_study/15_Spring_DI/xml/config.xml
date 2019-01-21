@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<bean id="propertyConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location" value="config.property"/>
+
+</bean>
+
+<bean id="config" class="com.zeroad.spring.model.Config">
+	<property name="httpUrl"><value>${http.url}</value></property>
+	<property name="httpsUrl"><value>${https.url}</value></property>
+	<property name="imageUrl"><value>${image.url}</value></property>
+	<property name="tempDir"><value>${temp.dir}</value></property>
+</bean>
+
+
+
+</beans>

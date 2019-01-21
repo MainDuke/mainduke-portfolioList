@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 07_css.html -->
+<!-- 여러개 태그 , 여러개 아이디 ,여러개 클래스를 지정할 수 있다 -->
+
+ <!-- id에 줄 경우 #아이디{ 속성1:속성값; 속성2:속성값; } 
+class에 줄 경우 .클래스명{ 속성1:속성값; 속성2:속성값 } 
+id의 경우는 원칙적으로 하나의 객체에만 적용 되며, class의 경우에는 여러 객체에 적용된다.
+ 왜냐하면 ID는 고유한 값, 즉 한 대상만 가질수 있지만, class는 여러객체가 받아가도 되기 때문이다.
+ 
+ CSS 에서 주석은 /**/ 안에 넣는다.
+-->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+ 
+ <style type="text/css">
+ /*여러개의 ID에 .... 지정*/
+  #box1,#box2{
+  width:100px;  height:60px;  border:3px solid blue;
+  }
+ 
+ /*여러개의 클래스에 동시에 설정하는 명령문*/
+  p,td,input{
+  font-family: 궁서체;  font-size: 15pt;  color:blue;
+  }
+ </style>
+</head>
+<body>
+ <div id="box1">Welcome!!!</div>
+ <div id="box2">Welcome!!!</div>
+ <br>
+ 
+ <p>welcome!!!</p>
+ 이름:<input type="text" name=name>
+ </body>
+</html>

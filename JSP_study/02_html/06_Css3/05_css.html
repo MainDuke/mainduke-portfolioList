@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 08_css.html -->
+<!--
+하위 태그 적용
+div span
+ -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+ 
+<style type="text/css">
+/*div 태그 필드에 span 에 대한 값을 설정하는 것
+특정 ID를 가진 div 태그 안쪽에 있는 태그에 대해서 설정 가능하며
+안쪽에 있는 태그도 특정 아이디나 클래스를 이용하여 구분하여 CSS 지정이 가능하다.
+*/
+  div.yellow_box span{  background-color: yellow;  }
+  div#box span{  text-align: center; padding: 10px; color: green;  }
+  div span.blue_span{  background-color:#09c;  }
+  div span#cspan{   text-align: center; padding: 15px;  color: orenge;  }
+</style>
+</head>
+ 
+<body>
+<div class="yellow_box">
+  <span>yellow_box 클래스의 안의 span태그 </span>
+</div>
+ 
+<div id="box">
+   <span>div 의 태그의 아이디가 box인 하위 span태그</span>
+</div>
+ 
+<div>
+  <span class=blue_span>
+    div안의 span 태그의 클래스가 blue_span
+  </span>
+</div>
+ 
+<div>
+     <span id="cspan">
+      div안의 span 태그의 아이디가 cspan
+     </span>
+</div>
+</body>
+</html>

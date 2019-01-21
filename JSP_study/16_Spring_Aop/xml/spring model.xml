@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+<bean id="baseOrder" abstract="true">
+	<property name="orderName" value="han"></property>
+	<property name="rcvName" value="chang"></property>
+	<property name="delvAddr" value="여기저기"></property>
+	<property name="delvTel" value="010-어쩌구"></property>
+
+</bean>
+
+<bean id="orderInfo" parent="baseOrder" class="com.zeroad.spring.model.order.OrderInfo">
+</bean>
+
+<bean id="orderItem" class="com.zeroad.spring.model.order.OrderItem">
+	<property name="prdName" value="신발"></property>
+	<property name="cnt" value="1"></property>
+	<property name="price" value="10000"></property>
+
+</bean>
+
+</beans>

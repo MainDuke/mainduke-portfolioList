@@ -1,0 +1,21 @@
+라이브러리 추가
+
+xml 폴더 작성
+classes 폴더 작성
+
+
+AOP 하기 위한 준비 작업
+
+//주문정보 클래스
+com.zeroad.spring.model.order.OrderInfo.java
+//주문 상품 정보 클래스
+com.zeroad.spring.model.order.OrderItem.java
+
+//예외 처리 클래스
+com.zeroad.spring.exception.InvalidOrderException.java
+
+
+========================================================
+//OrderService.java 인터페이스
+주문프로세서 정의
+com.zeroad.spring.service.order.OrderService.java

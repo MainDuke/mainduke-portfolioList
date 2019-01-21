@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+<bean id="pc01" class="com.zeroad.spring.model.product.Computer">
+	<constructor-arg value="PC-01"></constructor-arg>
+	<property name="cpu" value="i7"></property>
+	<property name="memory" value="2g"></property>
+	<property name="disk" value="100GB"></property>
+</bean>
+
+<bean id="pc02" class="com.zeroad.spring.model.product.Computer">
+	<constructor-arg value="PC-02"></constructor-arg>
+	<property name="cpu" value="i5"></property>
+	<property name="memory" value="4g"></property>
+	<property name="disk" value="200GB"></property>
+</bean>
+
+
+<bean id="pc03" class="com.zeroad.spring.model.product.Computer">
+	<constructor-arg value="PC-03"></constructor-arg>
+	<property name="cpu" value="i3"></property>
+	<property name="memory" value="8g"></property>
+	<property name="disk" value="300GB"></property>
+</bean>
+
+<!-- Collection type 참조. -->
+<bean id="listRefBean" class="com.zeroad.spring.model.CollectionBean">
+	<property name="itemList">
+		<list>
+			<ref bean="pc01"/>
+			<ref bean="pc02"/>
+			<ref bean="pc03"/>
+			<ref bean="pc01"/>
+			<ref bean="pc02"/>
+			<ref bean="pc03"/>
+		</list>
+		
+	</property>
+</bean>
+
+<bean id="setRefBean" class="com.zeroad.spring.model.CollectionBean">
+	<property name="itemSet">
+		<set>
+			<ref bean="pc01"/>
+			<ref bean="pc02"/>
+			<ref bean="pc03"/>
+			<ref bean="pc01"/>
+			<ref bean="pc02"/>
+			<ref bean="pc03"/>
+		</set>
+		
+	</property>
+</bean>
+
+<bean id="mapRefBean" class="com.zeroad.spring.model.CollectionBean">
+	<property name="itemMap">
+		<map>
+			
+			<entry key="1위" value-ref ="pc01"/>
+			<entry key="2위" value-ref ="pc02"/>
+			<entry key="3위" value-ref ="pc03"/>
+			<entry key="1위" value-ref ="pc01"/>
+			<entry key="2위" value-ref ="pc02"/>
+			<entry key="3위" value-ref ="pc03"/>
+		</map>
+		
+	</property>
+</bean>
+
+
+</beans>

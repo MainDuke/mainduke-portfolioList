@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<!-- id에 줄 경우 #아이디{ 속성1:속성값; 속성2:속성값; } 
+class에 줄 경우 .클래스명{ 속성1:속성값; 속성2:속성값 } 
+id의 경우는 원칙적으로 하나의 객체에만 적용 되며, class의 경우에는 여러 객체에 적용된다.
+ 왜냐하면 ID는 고유한 값, 즉 한 대상만 가질수 있지만, class는 여러객체가 받아가도 되기 때문이다.
+ 
+ CSS 에서 주석은 /**/ 안에 넣는다.
+-->
+
+<head>
+<style>
+               body{ background-color:rgb(255, 255, 211) }
+               #m_box{ width:100px; height:60px; border: 1px solid blue }
+               #s_box{ width:80px; height:40px; border: 1px solid red }
+               .box{ background-color:blue; }
+</style>
+</head>
+<body>
+               <div id="m_box">1</div><br>
+               <div class="box">2</div><br>
+               <div class="box">3</div><br>
+               <div id="s_box"class="box">4</div>
+               
+               <span id="m_box">여기는 테스트 SPAN</span>
+               <span id="m_box">여기는 테스트 SPAN</span>
+               
+</body>
+</html>

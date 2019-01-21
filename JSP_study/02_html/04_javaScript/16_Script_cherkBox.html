@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function ss()
+{
+       var m="";
+       if(document.myform.sub[0].checked==true){
+              m=document.myform.sub[0].value;
+              m+="\n";
+       }
+       if(document.myform.sub[1].checked==true){
+              m+=document.myform.sub[1].value;
+              m+="\n";
+       }
+       if(document.myform.sub[2].checked==true){
+              m+=document.myform.sub[2].value;
+              m+="\n";
+       }
+       if(document.myform.sub[3].checked==true){
+              m+=document.myform.sub[3].value;
+              m+="\n";
+       }
+       if(document.myform.sub[4].checked==true){
+              m+=document.myform.sub[4].value;
+              m+="\n";
+       }
+      
+       if(m==""){
+              alert("신청 과목이 없음");
+       }else{
+              alert("수강 과목은\n :"+m+"\n배열 갯수 :"+document.myform.sub.length);
+       }
+       //alert("배열 갯수 :"+document.myform.sub.length);
+}//function
+</script>
+
+
+</head>
+<body>
+
+<form name="myform" action="서버주소" method="get"><br>
+<input type="checkbox" name="sub" value="java">java<br>
+<input type="checkbox" name="sub" value="DB">DB<br>
+<input type="checkbox" name="sub" value="html">html<br>
+<input type="checkbox" name="sub" value="jsp">jsp<br>
+<input type="checkbox" name="sub" value="spring">spring<br>
+
+<input type="button"  value="확인" onClick="ss()"><br>
+<input type="reset" value="취소"><br>
+
+
+</form>
+
+</body>
+</html>

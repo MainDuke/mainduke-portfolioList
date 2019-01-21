@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- DriveManager DataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/spring?characterEncoding=euckr</value>
+		</property>
+		
+		<property name="username">
+			<value>root</value>
+		</property>
+		
+		<property name="password">
+			<value>12345</value>
+		</property>
+	</bean>
+	
+	<!-- DBCP DataSource -->
+	<bean id="dataSource2" class="org.apache.commons.dbcp.BasicDataSource">
+	
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/spring?characterEncoding=euckr</value>
+		</property>
+		
+		<property name="username">
+			<value>root</value>
+		</property>
+		
+		<property name="password">
+			<value>12345</value>
+		</property>
+		
+	</bean>
+	
+	<bean id="orderDao" class="com.zeroad.spring.dao.order.OrderDAOImpl">
+			<property name="dataSource" ref="dataSource"/><!-- setter 작업 -->
+	</bean>
+
+</beans>

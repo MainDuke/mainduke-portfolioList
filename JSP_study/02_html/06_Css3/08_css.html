@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+            div#box1,div#box2 { width:100px; height:60px; background-color:magenta; }
+            div#box1:hover { background-color:red; }
+            div#box1 span:hover { color: grey; }
+            div#box1 span, div#box2 span { text-align:center; color: white; }
+ 
+ 
+ /*기존에 있는 컨텐츠에다가 추가시켜주는 스타일 시트다.*/
+            div#box2 span:after { content:"+after 속성."; display:block }
+</style>
+</head>
+<body>
+            <div id="box1">
+                        <span>
+                                    box1 div 내의 span
+            </span>
+            </div>
+            <br>
+            <div id="box2">
+                        <span>
+                                    box2 div 내의 span
+            </span>
+            </div>
+</body>
+</html>

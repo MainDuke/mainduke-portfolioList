@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+    
+    <sqlMap namespace="User">
+    
+    	<typeAlias alias="user" type="model.User"/>
+    
+    
+    <!-- 리절트 맵 정의 -->
+    
+    <resultMap id="UserResult" class="model.User">
+    	<result property="userId" column="userId"/>
+    	<result property="userPw" column="userPw"/>
+    	<result property="userName" column="userName"/>
+    	<result property="wdate" column="wdate"/>
+    </resultMap>
+    
+    <!-- select 쿼리문 정의 -->
+    
+    <select id="selectAll" resultMap="UserResult">
+		select * from User    
+    </select>
+    
+    <!--  select 쿼리문 정의, 조건 검색 -->  
+    
+    <select id="selectUser" parameterClass="String" resultClass="model.User">
+    	select userId, userPw, userName, wdate
+    	from USER
+    	where userId=#userId#
+    
+    </select>
+    
+    <!-- insert 쿼리문 정의 -->
+    <insert id="insertUser" parameterClass="user">
+   		insert into user(userId, userPw, userName, wdate)
+   		values (#userId#, #userPw#, #userName#, now()) 
+    </insert>
+    
+    <!-- update 쿼리문 정의 -->
+    
+    <update id="updateUser" parameterClass="user">
+    	UPDATE USER SET userPW=#userPw#, userName=#userName#, wdate=now()
+    	where userId=#userId#    
+    </update>
+    
+    <!-- delete 쿼리문 정의 -->
+    
+    <delete id="deleteUser" parameterClass="String">
+    	DELETE FROM USER
+    	where userId=#userID#
+    </delete>
+    
+     <!--  select 쿼리문 정의,세부 조건 검색 -->  
+    
+    <select id="searchKim" parameterClass="String" resultClass="model.User">
+    	select userId, userPw, userName, wdate
+    	from USER
+    	where userId like '%kim%'
+
+    	
+    </select>
+    
+    
+ </sqlMap>
+    
+    
+    
+    

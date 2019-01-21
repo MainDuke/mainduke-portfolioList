@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+	<form method="post" action="20_select.jsp">
+	이름 : <input type="text" name="name"><br>
+	주소 : <input type="text" name="addr"><br>
+	학번 : <input type="text" name="studentNum"><br>
+	<br>
+	성별:<br>
+	<input type="radio" name="gender" value="남자" checked="checked">남자<br>
+	<input type="radio" name="gender" value="여자">여자<br> 
+	전공<br>
+	<select name="major">
+	<option value="국문학과" selected="selected">국문학과</option>
+	<option value="수학과" selected="selected">수학과</option>
+	<option value="기계과" selected="selected">기계과</option>
+	<option value="토목과" selected="selected">토목과</option>
+	<option value="컴공과" selected="selected">컴공과</option>
+	<option value="호텔조리" selected="selected">호텔조리</option>
+	<option value="체육" selected="selected">체육</option>
+	</select>	
+	<br>
+	<input type="submit" value="제출">&nbsp;
+	<input type="reset" value="취소">
+	
+	</form>	
+	</body>
+</html>

@@ -1,0 +1,40 @@
+다이어리
+
+mysql>create database diarydb
+
+use diarydb
+
+create table diary
+(id int not null auto_increment primary key,
+year varchar(4) not null,
+month varchar(2) not null,
+day varchar(2) not null,
+subject varchar(100),
+contents text,
+created date,
+userid varchar(16));
+
+=======================
+설명
+=======================
+
+create table diary(
+id int not null auto_increment primary k, 글번호
+year varchar(4) not null,
+month varchar(2) not null,
+day varchar(2) not null,
+subject varchar(100),
+contents text,
+created date,
+userid varchar(16)
+);
+
+=======================
+db.properties 작성
+C:\00_han\01_work\06_jsp\db.properties
+경로 지정
+=======================
+
+
+
+

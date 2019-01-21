@@ -1,0 +1,183 @@
+//==책 DB==============================================================================================
+
+create table book(
+no varchar(15) not null,
+name varchar(22) not null,
+writer varchar(15) not null,
+publisher varchar(15) not null,
+lender varchar(10) null,
+rentable varchar(10) not null
+);
+
+
+create table book(
+no varchar(15) not null,
+name varchar(22) not null,
+writer varchar(15) not null,
+publisher varchar(15) not null,
+lender varchar(10) null,
+rentable varchar(10) not null
+);
+
+
+insert into Book values('010101','데미안','헤르만헤세','민음사','솔식이','2016-03-04');
+insert into Book values('010102','미움받을 용기','고가 후미타케','인플루엔션','송유경','2016-03-02');
+insert into Book values('010103','라플라스의 미녀','히가시노 게이고','현대문학','송휘경','2016-03-01');
+insert into Book values('010104','톰소여의 모험','마크트웨인','시공주니어','한창민','2016-03-02');
+insert into Book values('010105','고등어','공지영','푸른숲','고돌이','2016-02-28');
+insert into Book values('010105','화폐전쟁','쑹훙빈','랜덤하우스 코리아','','');
+insert into Book values('010106','바람과 함께 사라지다','마가렛 미첼','열린책들','','');
+insert into Book values('010107','법륜스님의 행복','법륜','나무의마음','','');
+insert into Book values('010108','미라클모닝','할 엘로드','한빛비즈','','');
+insert into Book values('010109','오리지널스','애덤 그랜트','한국경제신문사','','');
+insert into Book values('010110','처음처럼','신영복','돌베개','','');
+insert into Book values('010111','사피엔스','조현욱','김영사','','');
+insert into Book values('010112','나미야 잡화점의 기적','히가시노 게이고','현대문학','','');
+insert into Book values('010113','사슴','백석','소와다리','','');
+insert into Book values('010114','환율의 미래','홍춘욱','에이지21','','');
+insert into Book values('010115','진달래꽃','김소월','소와다리','','');
+insert into Book values('010116','3분 고전','박재희','작은씨앗','','');
+insert into Book values('010117','트렌드 코리아 2016','김난도','미래의 창','','');
+insert into Book values('010118','앵무새 죽이기','하퍼 리','열린책들','','');
+insert into Book values('010119','게스트하우스 프랑스','민혜련','홍익출판사','','');
+insert into Book values('010120','구해줘','기욤뮈소','밝은세상','','');
+insert into Book values('010121','담론','신영복','돌베개','','');
+insert into Book values('010122','언제 들어도 좋은 말','이석원','그책','','');
+insert into Book values('010123','감옥으로부터의 사색','신영복','돌배게','','');
+insert into Book values('010124','명리','강헌','돌베개','','');
+insert into Book values('010125','설전','법정,성철','책읽는 섬','','');
+insert into Book values('010126','시민의 교양','채사장','웨일북','','');
+insert into Book values('010127','아프니까 청춘이다','김난도','쌤앤파커스','','');
+insert into Book values('010128','정의란 무엇인가','마이클 샌델','김영사','','');
+insert into Book values('010129','엄마를 부탁해','신경숙','창비','','');
+insert into Book values('010130','백설공주에게 죽음을','넬레 노이하우스','북로드','','');
+insert into Book values('010131','스티브 잡스','월터 아이작슨','민음사','','');
+insert into Book values('010132','도가니','공지영','창비','','');
+insert into Book values('010133','생각 버리기 연습','코이케 류노스케','21세기 북스','','');
+insert into Book values('010134','닥치고 정치','김어준','푸른숲','','');
+insert into Book values('010135','자기혁명(시골의사 박경철의)','박경철','리더스북','','');
+insert into Book values('010136','그들이 말하지 않는 23가지','장하준','부키','','');
+insert into Book values('010137','종이 여자','기욤 뮈소','밝은세상','','');
+insert into Book values('010138','낯익은 타인들의 도시','최인호','여백미디어','','');
+insert into Book values('010139','7년의 밤','정유정','은행나무','','');
+insert into Book values('010140','10년후 미래','대니얼 앨트먼','청림출판','','');
+insert into Book values('010141','빅픽쳐','더글라스 케네디','밝은세상','','');
+insert into Book values('010142','화내지 않는 연습','코이케 류노스케','21세기 북스','','');
+insert into Book values('010143','빌딩부자들','성선화','다산북스','','');
+insert into Book values('010144','디퍼런트','문영미','살림Biz','','');
+insert into Book values('010145','사라진 소녀들','안드레아스 빙켈만','뿔','','');
+insert into Book values('010146','4001','신정아','사월의 책','','');
+insert into Book values('010147','친구가 되어 주실래요','이태석','생활성서사','','');
+insert into Book values('010148','스무 살 절대 지지 않기를','이지성','리더스북','','');
+insert into Book values('010149','마당을 나온 암탉','황선미','사계절','','');
+insert into Book values('010150','혼자 사는 즐거움','사라 밴 브레스낙','토네이도','','');
+insert into Book values('010151','완득이','김려령','창비','','');
+insert into Book values('010152','나쁜 사마리아인들','장하준','부키','','');
+insert into Book values('010153','세 얼간이','체탄 바갓','북스퀘어','','');
+
+//==회원 DB==============================================================================================
+
+
+create table member(
+memNo varchar(10) not null,
+name varchar(10) not null, 
+id varchar(20) not null,
+pwd varchar(10)not null,	
+email varchar(30)default '', 	
+sex varchar(10)
+);
+
+insert into member(memNo, name, id, pwd, email,sex)
+ value ('00','관리자', 'admin','12345', 'admin@system.com','남자');
+
+insert into member(memNo, name, id, pwd, email,sex)
+ value ('1','홍길동', 'hong123','12345', 'hong@hanmailnet','남자');
+
+insert into member(memNo, name, id, pwd, email,sex)
+ value ('2','가나다', 'abc123','12345', 'abc@hanmailnet','남자');
+
+//==날짜 DB==============================================================================================
+
+create table rent(
+no varchar(15) not null,
+memNo varchar(10),
+rentdate date,
+rentable varchar(10)
+);
+
+insert into rent(no, memNo, rentdate, rentable) value ('010101', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010102', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010103', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010104', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010105', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010106', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010107', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010108', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010109', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010110', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010111', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010112', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010113', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010114', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010115', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010116', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010117', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010118', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010119', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010120', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010121', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010122', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010123', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010124', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010125', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010126', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010127', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010128', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010129', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010130', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010131', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010132', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010133', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010134', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010135', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010136', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010137', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010138', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010139', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010140', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010141', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010142', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010143', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010144', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010145', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010146', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010147', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010148', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010149', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010150', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010151', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010152', null , null, '대여가능');
+insert into rent(no, memNo, rentdate, rentable) value ('010153', null , null, '대여가능');
+
+
+//==개인별 DB***==============================================================================================
+create table hi00(
+no varchar(15) not null, 
+name varchar(22) not null, 
+writer varchar(15) not null, 
+publisher varchar(15) not null
+);
+
+create table hi1(
+no varchar(15) not null, 
+name varchar(22) not null, 
+writer varchar(15) not null, 
+publisher varchar(15) not null
+);
+
+create table hi2(
+no varchar(15) not null, 
+name varchar(22) not null, 
+writer varchar(15) not null, 
+publisher varchar(15) not null
+);

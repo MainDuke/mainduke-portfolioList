@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	str=""; //변수
+	
+	function ss(){
+		
+		for(i=0; i<document.myform.job.options.length;i++)
+		{
+			if (document.myform.job.options[i].selected) {
+					str+= document.myform.job.options[i].text+"<br>";				
+			}
+		}//for end
+		document.write(str);
+	}//ss end
+	
+	</script>
+	
+	</head>
+	<body>
+	
+<h1 align=center>좋아하는 과일 선택하시오.</h1>
+
+<form name="myform"  action=""  method="get">
+
+	<select name="job" size="5" multiple>  <!-- 다중선택  multiple-->
+		<option selected>선택하시오.
+		<option value="student">학생
+		<option value="housekeeper">주부
+		<option value="clerk">회사원
+		<option value="publishman">공무원
+		<option value="busnisman">자영업
+	<option value="president">사장
+	</select>
+	
+	
+<input type="button"  value="버튼"  onClick="ss()">
+
+<input type="reset"  value="cancel" >
+</form>
+	
+	
+	
+	</body>
+</html>

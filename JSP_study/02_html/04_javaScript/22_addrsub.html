@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>22_addrsub.html, 팝업창</title>
+<script type="text/javascript">
+function zip(){
+	//주소 자동입력, opener : 부모창
+	opener.myform.address.value = document.zipform.address.value;
+	opener.myform.zipcode.value = document.zipform.zipcode.value;
+	document.zipform.address.value="";
+	document.zipform.zipcode.value="";
+	window.close(); //팝업창 닫기.
+}
+function end(){
+	window.close(); //팝업창 닫기
+	
+}
+
+</script>
+
+
+</head>
+<body>
+
+<form name="zipform">
+<table border="1">
+
+<tr>
+<td colspan="2">
+<h3>주소를 입력 하시오</h3>
+</td>
+</tr>
+
+<tr>
+<td>주소:<input type="text" name="address"></td>
+<td>우편번호:<input type="text" name="zipcode"></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+
+<input type="button" value="확인" onClick="zip()">
+<input type="button" value="닫기" onClick="end()">
+<a href="javaScript:window.close()">닫기</a>
+<a href="javaScript:self.close()">닫기</a>
+<a href="javaScript:close()">닫기</a>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>

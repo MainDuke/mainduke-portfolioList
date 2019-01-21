@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="testboard">
+<!-- <mapper namespace="mybatis.demo.account.TestAAA"> -->
+<!-- 네임스페이스라서 우리 마음대로 줄 수 있음. AAA 넣어줬다. -->
+
+	<resultMap id="testResult" type="mybatis.demo.account.Test">
+		<id property="id" column="id"/>
+		<!-- id 태그는 프라이머리키일때. 나머지태그는 result-->
+		<result property="pwd" column="pwd"/>
+		<result property="name" column="name"/>
+	</resultMap>
+	
+	<!-- 전체 List -->
+	<select id="selectAll" parameterType="String" resultType="mybatis.demo.account.Test">
+	<!-- ibatis에선 parameterClass라고 썼었는데 여기선 parameterType
+	resultType에는 저 위에 resultMap 부분을 갖다 써도 되고 mybatis를 써도 된다 -->
+		select * from test
+		<!-- 여기도 뒤에 세미콜론 안쓴당 -->
+	</select>
+	
+	<!-- 검색 -->
+	<select id="selectOne" parameterType="String" resultType="mybatis.demo.account.Test">
+		select * from test where id=#{id}
+		<!-- 파라미터 쓰는 방식도 다르당 -->
+	</select>
+	
+	<!-- 검색 like -->
+	<select id="selectObject" parameterType="String" resultType="mybatis.demo.account.Test">
+		select * from test where id like #{id}
+	</select>
+	
+	<!-- insert -->
+	<insert id="insertTest" parameterType="mybatis.demo.account.Test">
+	<!-- 알리어스를 지금까지는 이쪽에서 써왔었는데 마이바티스에서는 sqlMapConfig에서 써줘야 함.
+	알리어스 쓰기 싫으면 mybatis.demo.account.Test <이거 다 갖다 써줘야함 -->
+		insert into test(id,pwd,name) values(#{id}, #{pwd}, #{name})
+	</insert>
+	
+	<!-- update -->
+	<update id="updateTest" parameterType="mybatis.demo.account.Test">
+	<!-- 얜 수정이라 파라미터만 필요함~ -->
+		update test set pwd=#{pwd}, name=#{name}
+		where id=#{id}
+	</update>
+	
+	<!-- delete -->
+	<delete id="deleteTest" parameterType="String">
+	<!-- id가 들어갈거라서 파람타입 String -->
+		delete from test
+		where id=#{id}
+	</delete>
+
+</mapper>

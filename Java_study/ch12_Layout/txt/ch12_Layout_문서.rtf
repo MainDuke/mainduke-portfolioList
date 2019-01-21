@@ -1,0 +1,107 @@
+{\rtf1\ansi\ansicpg949\deff0\deflang1033\deflangfe1042{\fonttbl{\f0\fmodern\fprq2\fcharset129 \'b1\'bc\'b8\'b2;}{\f1\froman\fprq2\fcharset129 \'b9\'d9\'c5\'c1;}{\f2\froman\fprq2\fcharset0 Times New Roman;}}
+{\colortbl ;\red0\green0\blue255;\red255\green0\blue0;\red0\green0\blue128;\red255\green255\blue0;}
+{\stylesheet{ Normal;}{\s1 heading 1;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\nowidctlpar\lang1042\b\f0\fs20\'c1\'a610\'c0\'e5  Layout_\'b9\'ae\'bc\'ad.rtf  \f1\par
+\f0\fs40 LayoutManager\fs20  :\cf1  \'c4\'c1\'c6\'f7\'b3\'cd\'c6\'ae \'b9\'e8\'c4\'a1 \'b0\'fc\'b8\'ae\'c0\'da \cf0\f1\par
+\par
+\par
+\f0 1. FlowLayout :  \cf2 Panel\cf0  \'b0\'e8\'bf\'ad\'c0\'c7 \cf2\'b5\'f0\'c6\'fa\'c6\'ae\cf0  \'c0\'cc\'b4\'d9 ( Panel , Applet )\par
+2. BorderLayout : \cf2 Window\cf0  \'b0\'e8\'bf\'ad\'c0\'c7 \cf2\'b5\'f0\'c6\'fa\'c6\'ae\cf0  \'c0\'cc\'b4\'d9 ( Frame , Dialog, FileDialog)\par
+3. GridLayout : \'b5\'bf\'c0\'cf\'c7\'d1 \'b0\'dd\'c0\'da \'b8\'f0\'be\'e7\'c0\'b8\'b7\'ce \'b9\'e8\'c4\'a1 \par
+4. GridBagLayout : \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'b8\'a6 \'b4\'d9\'be\'e7\'c7\'d1 \'c5\'a9\'b1\'e2\'b7\'ce \'b9\'e8\'c4\'a1 \par
+5. CardLayout : \'c4\'ab\'b5\'e5\'bd\'c4\'c0\'b8\'b7\'ce \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'b9\'e8\'c4\'a1 \par
+6. null  : \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b8\'d3\'b0\'a1 \'c1\'f7\'c1\'a2 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'c5\'a9\'b1\'e2\'bf\'cd \'c0\'a7\'c4\'a1\'b8\'a6 \'c1\'f6\'c1\'a4\'c7\'d8 \'c1\'d8\'b4\'d9 \par
+\par
+\par
+\cf1\fs30 FlowLayout\cf0\f1\fs20\par
+\cf3\f0 -   Panel\'b0\'fa Applet \'c0\'c7 \'b5\'f0\'c6\'fa\'c6\'ae Layout \'c0\'cc\'b4\'d9 \par
+-   FlowLayout \'c6\'af\'c2\'a1 \par
+\cf0    \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'c5\'a9\'b1\'e2\'b8\'a6 \'bb\'e7\'bf\'eb\'c0\'da\'b0\'a1 \'ba\'af\'b0\'e6\'c7\'cf\'bf\'b4\'c0\'bb\'b6\'a7 , \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'c5\'a9\'b1\'e2\'b4\'c2 \'ba\'af\'c8\'ad\'c1\'f6 \'be\'ca\'b0\'ed \'bb\'f3\'b4\'eb\'c0\'fb\'c0\'ce \'c0\'a7\'c4\'a1\'b8\'b8 \'ba\'af\'c7\'d1\'b4\'d9\f1\par
+\par
+\f0 - \'b8\'b8\'be\'e0 Panel \'b0\'e8\'bf\'ad\'c0\'cc \'be\'c6\'b4\'d1 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1 FlowLayout \'c0\'bb \'c0\'fb\'bf\'eb\'c7\'cf\'b7\'c1\'b8\'e9\f1\par
+\f0\'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 setLayout()\'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 FlowLayout \'c7\'fc \'bf\'c0\'ba\'ea\'c1\'a7\'c6\'ae\'b8\'a6 \'b3\'d1\'b0\'dc \'c1\'d6\'be\'ee\'be\'df\'c7\'d1\'b4\'d9 \par
+\par
+Frame f;\par
+\cf3 f.setLayout(new FlowLayout());\par
+\cf0\f1\par
+\cf3\f0 - FlowLayout \'bb\'fd\'bc\'ba\'c0\'da\f1\par
+\cf0\f0  1.  public FlowLayout()\par
+         \'b0\'a1\'bf\'ee\'b5\'a5 \'c1\'a4\'b7\'c4 , \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'b0\'a3\'c0\'c7 \'bc\'f6\'c6\'f2/\'bc\'f6\'c1\'f7 \'b0\'c5\'b8\'ae\'b4\'c2 5\'c7\'c8\'bc\'bf\'c0\'ce FlowLayout\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d1\'b4\'d9 \par
+\par
+ 2.  public FlowLayout(int align, int hgap, int vgap)\par
+           FlowLayout.LEFT : \'bf\'de\'c2\'ca\'c1\'a4\'b7\'c4\f1\par
+\f0            FlowLayout.RIGHT : \'bf\'c0\'b8\'a5\'c2\'ca\'c1\'a4\'b7\'c4\f1\par
+\f0            FlowLayout.CENTER : \'b0\'a1\'bf\'ee\'b5\'a5\'c1\'a4\'b7\'c4\f1\par
+\par
+\f0           hgap :   \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'c0\'c7 \'bc\'f6\'c6\'f2 \'b0\'c5\'b8\'ae ( \'c7\'c8\'bc\'bf \'b4\'dc\'c0\'a7 \'c0\'cc\'b4\'d9 )\par
+          vgap :   \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'c0\'c7 \'bc\'f6\'c1\'f7 \'b0\'c5\'b8\'ae \par
+\par
+\pard\keepn\nowidctlpar\s1\qj\lang1033\kerning2\f2\fs40 BorderLayout \par
+\pard\nowidctlpar\qj\lang1042\f1\fs18 1. BorderLayout\'c0\'ba Window \'b0\'e8\'bf\'ad Container\'bf\'a1 \highlight4\'b1\'e2\'ba\'bb\'c0\'fb\highlight0\'c0\'b8\'b7\'ce \'c0\'fb\'bf\'eb\'b5\'c7\'b4\'c2 LayoutManager\'c0\'cc\'b4\'d9\par
+\par
+2. \'b4\'e7\'bf\'ac\'c8\'f7 Window\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'c7\'cf\'c0\'a7 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'ce \highlight4 Frame\highlight0\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'e6\'bf\'ec\'bf\'a1\'b5\'b5 \'c6\'af\'ba\'b0\'c8\'f7 LayoutManager\'b8\'a6 \'ba\'af\'b0\'e6\'c7\'cf\'c1\'f6 \'be\'ca\'b4\'c2\'c7\'d1 \highlight4 BorderLayout\highlight0\'c0\'cc \'c0\'fb\'bf\'eb\'b5\'c8\'b4\'d9\par
+\par
+3. BorderLayout\'c6\'af\'c2\'a1 : Container\'c0\'c7 \'c5\'a9\'b1\'e2\'b8\'a6 \'bb\'e7\'bf\'eb\'c0\'da\'b0\'a1 \'ba\'af\'b0\'e6\'bd\'c3\'c5\'b0\'b8\'e9 \par
+        Component\'c0\'c7 \'bb\'f3\'b4\'eb\'c0\'fb\'c0\'ce \'c0\'a7\'c4\'a1\'b4\'c2 \'ba\'af\'c7\'cf\'c1\'f6 \'be\'ca\'b0\'ed \highlight4\'c5\'a9\'b1\'e2\'b8\'b8 \'ba\'af\highlight0\'c7\'d1\'b4\'d9\par
+\par
+4. \'b5\'fb\'b6\'f3\'bc\'ad BorderLayout\'c0\'cc \'c0\'fb\'bf\'eb\'b5\'c8 Container\'c0\'c7 \'b0\'e6\'bf\'ec\'b4\'c2\par
+Component\'b8\'a6 Frame\'c0\'c7 \'be\'ee\'b4\'c0 \'c0\'a7\'c4\'a1\'bf\'a1  \'ba\'d9\'c0\'cf\'b0\'cd\'c0\'ce\'c1\'f6 add()\'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'c1\'f6\'c1\'a4\'c7\'d1\'b4\'d9\par
+\trowd\trgaph99\trleft-61\trrh338\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl99\trpaddr99\trpaddfl3\trpaddfr3
+\clvertalc\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx1267\pard\intbl\nowidctlpar\li-38\qj c1.add(c2,n);\cell\row\pard\nowidctlpar\sl-240\slmult0\qj c1  : BorderLayout\'c0\'cc \'c0\'fb\'bf\'eb\'b5\'c9 \highlight4 Container\highlight0\'bf\'c0\'ba\'ea\'c1\'a7\'c6\'ae\par
+c2  : Container\'ba\'d9\'c0\'cf \highlight4 Component\highlight0\'bf\'c0\'ba\'ea\'c1\'a7\'c6\'ae\par
+n  : \'ba\'d9\'c0\'cf \highlight4\'c0\'a7\'c4\'a1\highlight0\'b8\'a6 \'b3\'aa\'c5\'b8\'b3\'bb\'b4\'c2 \'bb\'f3\'bc\'f6\par
+\par
+\trowd\trgaph99\trleft-173\trrh300\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl99\trpaddr99\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2880\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4860\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx6826\pard\intbl\nowidctlpar\li74\qj       n\cell\pard\intbl\nowidctlpar\li538\qj\'c0\'c7\'b9\'cc\cell\pard\intbl\nowidctlpar\qj Container\'c5\'a9\'b1\'e2\'ba\'af\'b0\'e6\'bd\'c3\cell\row\trowd\trgaph99\trleft-173\trrh1227\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl99\trpaddr99\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2880\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4860\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx6826\pard\intbl\nowidctlpar\li74\qj\highlight4 Borderlayout.NORTH\highlight0 (=\highlight4\lang1033\f2\rdblquote\lang1042\f1 North\lang1033\f2\rdblquote\highlight0\lang1042\f1 )\par
+BorderLayout.SOUTH(=\lang1033\f2\rdblquote\lang1042\f1 South\lang1033\f2\rdblquote\lang1042\f1 )\par
+BorderLayout.EAST(=\lang1033\f2\rdblquote\lang1042\f1 East\lang1033\f2\rdblquote\lang1042\f1 )\par
+BorderLayout.WEST(=\lang1033\f2\rdblquote\lang1042\f1 West\lang1033\f2\rdblquote\lang1042\f1 )\par
+BorderLayout.CENTER(=\lang1033\f2\ldblquote\lang1042\f1 Center\lang1033\f2\rdblquote\lang1042\f1 )\cell\pard\intbl\nowidctlpar\fi-354\li366 Container   \'c0\'c7\'c0\'ad\'c2\'ca   \lang1033\f2\ldblquote\lang1042\f1       \'be\'c6\'b7\'a1\'c2\'ca\par
+\pard\intbl\nowidctlpar\li12\qj    \lang1033\f2\ldblquote\lang1042\f1        \'bf\'c0\'b8\'a5\'c2\'ca\par
+\pard\intbl\nowidctlpar\li50\qj    \lang1033\f2\ldblquote\lang1042\f1        \'bf\'de\'c2\'ca\par
+\pard\intbl\nowidctlpar\li88\qj    \lang1033\f2\ldblquote\lang1042\f1     \'b3\'aa\'b8\'d3\'c1\'f6\'bf\'b5\'bf\'aa\cell\pard\intbl\nowidctlpar\li38\qj\'b3\'f4\'c0\'cc\'b0\'ed\'c1\'a4, \'c6\'f8\'c0\'ba\'ba\'af\'b0\'e6\par
+\pard\intbl\nowidctlpar\li75\qj\'b3\'f4\'c0\'cc\'b0\'ed\'c1\'a4, \'c6\'f8\'c0\'ba\'ba\'af\'b0\'e6\par
+\pard\intbl\nowidctlpar\li88\qj\'b3\'f4\'c0\'cc\'ba\'af\'b0\'e6, \'c6\'f8\'c0\'ba\'b0\'ed\'c1\'a4\par
+\pard\intbl\nowidctlpar\li125\qj\'b3\'f4\'c0\'cc\'ba\'af\'b0\'e6, \'c6\'f8\'c0\'ba\'b0\'ed\'c1\'a4\par
+\pard\intbl\nowidctlpar\li163\qj\'b3\'f4\'c0\'cc,\'c6\'f8 \'b8\'f0\'b5\'ce \'ba\'af\'b0\'e6\cell\row\pard\nowidctlpar\qj\par
+5. \'b8\'b8\'be\'e0 Window\'b0\'e8\'bf\'ad\'c0\'cc \'be\'c6\'b4\'d1 Container\'b8\'a6  BorderLayout\'b8\'a6 \'c0\'fb\'bf\'eb\'c7\'cf\'b7\'c1\'b8\'e9\par
+Container\'c5\'ac\'b7\'a1\'bd\'ba setLayout()\'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 BorderLayout\'c7\'fc \'bf\'c0\'ba\'ea\'c1\'a7\'c6\'ae\'b8\'a6 \'b3\'d1\'b0\'dc\'c1\'d8\'b4\'d9\par
+\par
+p \'c7\'da\'b5\'e9 \'ba\'af\'bc\'f6\'b0\'a1 \'b0\'a1\'b8\'ae\'c5\'b0\'b4\'c2 Panel\'c0\'c7 LayoutManager\'b8\'a6 BoerderLayout\'c0\'b8\'b7\'ce \'c7\'cf\'b7\'c1\'b8\'e9\par
+\trowd\trgaph99\trleft-73\trrh363\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl99\trpaddr99\trpaddfl3\trpaddfr3
+\clvertalc\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx3060\pard\intbl\nowidctlpar\li-26\qj\highlight4 p.setLayout(new BorderLayout());\highlight0\cell\row\pard\nowidctlpar\qj\par
+6. BorderLayout()\'bb\'fd\'bc\'ba\'c0\'da : java.awt.BorderLayout\'c5\'ac\'b7\'a1\'bd\'ba \'bc\'d2\'bc\'d3\par
+   \'bf\'f8\'c7\'fc : public BerderLayout()\par
+        * \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'bb\'e7\'c0\'cc\'c0\'c7 \'b0\'a3\'b0\'dd\'c0\'cc \'be\'f8\'b4\'c2 BoerderLayout\'bb\'fd\'bc\'ba\par
+   \'bf\'f8\'c7\'fc : public BorderLayout(int hgap, int vgap)\par
+        * \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'bb\'e7\'c0\'cc\'bf\'a1 \'c1\'f6\'c1\'a4\'b5\'c8 \'b0\'a3\'b0\'dd\'c0\'cc \'c0\'d6\'b4\'c2 BorderLayout\'bb\'fd\'bc\'ba\par
+\par
+\pard\nowidctlpar\kerning0\fs20\par
+\pard\keepn\nowidctlpar\s1\qj\lang1033\kerning2\f2\fs40 GridLayout\par
+\pard\nowidctlpar\qj\lang1042\b0\f1\fs20 1. GridLayout\'c0\'ba Component\'b8\'a6 \'b5\'bf\'c0\'cf\'c7\'d1 \'c5\'a9\'b1\'e2\'c0\'c7 \'b0\'dd\'c0\'da(Grid)\'b3\'aa\'b4\'a9\'be\'ee Container \'bf\'a1 \'c7\'a5\'bd\'c3\par
+\par
+2. GridLayout\'c0\'bb \'c0\'fb\'bf\'eb\'c7\'cf\'b7\'c1\'b8\'e9\par
+\pard\nowidctlpar\fi195\qj Container\'c5\'ac\'b7\'a1\'bd\'ba \'b8\'de\'bc\'d2\'b5\'e5\'c0\'ce \highlight4 setLayout\highlight0 ()\'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 \highlight4 GridLayout\highlight0\'c7\'fc \'bf\'c0\'ba\'ea\'c1\'a7\'c6\'ae\'b8\'a6 \'b3\'d1\'b0\'dc\'c1\'d8\'b4\'d9.\par
+\par
+\pard\nowidctlpar\qj\'bf\'b9) f \'c7\'da\'b5\'e9 \'ba\'af\'bc\'f6\'b0\'a1 \'b0\'a1\'b8\'ae\'c5\'b0\'b4\'c2Frame\'c0\'c7 LayoutManager\'b8\'a6 GridLayout\'c7\'cf\'b7\'c1\'b8\'e9\par
+\trowd\trgaph99\trleft-36\trrh878\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl99\trpaddr99\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx5387\pard\intbl\nowidctlpar\li-63\qj    f.setLayout(new GridLayout(3,2));\par
+                              \'c1\'d9,\'c4\'ad\par
+   f.setLayout(new GridLayout(0,2));\cell\row\pard\nowidctlpar\qj 0\'c0\'ba add() \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d1 \highlight4\'c8\'bd\'bc\'f6\highlight0\'bf\'a1 \'b5\'fb\'b6\'f3 \'ba\'af\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9. \par
+add()\'b0\'a1 6\'b9\'f8 \'c8\'a3\'c1\'d9\'b5\'c7\'be\'fa\'b4\'d9\'b8\'e9  3\'c7\'e0 2\'bf\'ad\'b7\'ce\'b5\'c8\'b4\'d9\par
+\par
+3. \'c6\'af\'c2\'a1 : Container\'c0\'c7 \'c5\'a9\'b1\'e2\'b8\'a6 \'bb\'e7\'bf\'eb\'c0\'da\'b0\'a1 \'ba\'af\'b0\'e6\'bd\'c3\'c4\'d7\'c0\'bb \'b6\'a7 \'b1\'d7 \'c0\'a7\'bf\'a1 \'ba\'d9\'be\'ee\'c0\'d6\'b4\'c2 \par
+      \'b0\'a2 Component\'c0\'c7 \'bb\'f3\'b4\'eb\'c0\'fb\'c0\'a7\'c4\'a1\'b4\'c2 \'ba\'af\'c7\'cf\'c1\'f6 \'be\'ca\'b0\'ed \highlight4\'c5\'a9\'b1\'e2\highlight0\'b8\'b8 \'ba\'af\'c7\'d4\par
+\par
+4. GridLayout()\'bb\'fd\'bc\'ba\'c0\'da\par
+\pard\nowidctlpar\fi195\qj\'bf\'f8\'c7\'fc : \b public GridLayout()\b0\par
+     * \'c7\'d1 \'c7\'e0\'bf\'a1\'bc\'ad \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'b8\'b8\'c5\'ad \'bf\'ad\'c0\'cc \'c0\'d6\'b4\'c2 GridLayout\'c0\'bb \'bd\'c7\'c7\'e0\par
+\'bf\'f8\'c7\'fc \b : public GridLayout(int rows, int cols)\par
+\b0     * \'c1\'f6\'c1\'a4\'c7\'d1 \b\'c7\'e0, \'bf\'ad \'bc\'f6\'b8\'a6 \'b0\'a1\'c1\'f8\b0  GridLayout\'bb\'fd\'bc\'ba\par
+\'bf\'f8\'c7\'fc \b :public GridLayout(int rows, int cols, int hgap, int vgap)\par
+\b0     * \'c7\'e0\'bc\'f6, \'bf\'ad\'bc\'f6 , \'bc\'f6\'c6\'f2\'b0\'a3\'b0\'dd, \'bc\'f6\'c1\'f7 \'b0\'a3\'b0\'dd\par
+throws \lang1033\f2\'85\lang1042\f1  illegalArgumentException  ..\'c7\'e0,\'bf\'ad\'c0\'cc \'c1\'f6\'c1\'a4\'b5\'c7\'c1\'f6 \'be\'ca\'be\'d2\'c0\'bb \'b0\'e6\'bf\'ec\par
+\pard\nowidctlpar\kerning0\b\par
+}
+ 

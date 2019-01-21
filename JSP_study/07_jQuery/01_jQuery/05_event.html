@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<script type="text/javascript">
+
+$(function(){
+	//$('#btn1').on('click',function(event){ //jQuery 1.7x 이전버전}
+	$('#btn1').on('click',function(event){//jQuery 1.7x 이상부터 사용
+		alert("btn1 clicked")
+		$(this).css('background-color','yellow');
+		console.log(this);
+		
+	});
+	
+	$('#btn2').click(function(event){
+		alert("btn2 clicked");
+		$(this).css('color','#f00');
+		$(this).css('background-color','cyan');
+	});
+	
+});
+
+</script>
+
+</head>
+<body>
+<button id="btn1">Click1</button>
+<button id="btn2">Click2</button>
+</body>
+</html>

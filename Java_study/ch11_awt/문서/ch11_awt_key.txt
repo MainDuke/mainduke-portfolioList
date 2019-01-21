@@ -1,0 +1,11 @@
+keyPressd(KeyEvent e) : 키보드 위치상의 값으로 처리한다.
+			A= 65 a=65
+			F1 ~ F12 shift ctrl 엔터키, tab 키 : 처리 못함.
+			가상키 값.
+		
+
+keyTyped(KeyEvent e) : 아스키 코드 값으로 처리 한다.
+			A=65 a=97 (알파벳, 숫자)
+			F1 ~ F12 shift ctrl 엔터키, tab 키 : 처리 못함.
+
+keyReleased(KeyEvent e) : 키보드에서 손을 떼었을때, 

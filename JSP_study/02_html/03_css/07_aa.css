@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+.red{
+	color:red;
+	font-family: 궁서체 바탕체;
+	text-align: center;
+	font-size: 12pt;
+}
+.green{
+	color:green;
+	text-align: center;
+	font-size: 12pt;
+}
+.blue{
+	color:blue;
+	text-align: center;
+	font-size: 12pt;
+}
+
+a:link{color:blue; text-decoration: none; font-size: 12pt;}
+/*방문하기 이전 글씨 색(하이퍼 링크 글자색 지정)*/
+a:visited{color:red; text-decoration: none; font-size: 12pt;}/* 방문후*/
+a:active{color:green; text-decoration: none; font-size: 12pt;}/*방문중*/
+a:hover{color:black; text-decoration: underline; font-size: 12pt; cursor:crosshair;} /*마우스 오버*/
+
+/* a.hover{color:black; text-decoration: underline; font-size: 12pt; cursor:hand;}*/

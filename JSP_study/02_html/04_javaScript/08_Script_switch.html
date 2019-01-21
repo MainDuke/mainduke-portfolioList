@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+	var m;
+	
+	m=prompt("점수 입력","");
+	n=parseInt(m);
+	
+	if (m=="" || m==null) {
+		alert("입력하지않았거나 취소버튼 눌렀다.");
+		
+	}else if (isNaN(n)) {
+		alert("indivisual Nember(숫자를 입력하시오.)");
+		
+	}else if (n>100 || n<0) {
+		alert("0~100사이 숫자만 입력하시오")
+	}else{
+		n=Math.floor(n/10); //내림값, 참조 Math.ceil(n/10)'
+		switch (n) {
+		case 10:
+		case 9:
+			alert("A학점");
+			break;
+		case 8:
+			alert("B학점");
+			break;
+		case 7:
+			alert("C학점");
+			break;
+		case 6:
+			alert("D학점");
+			break;
+		default:
+			alert("F학점");
+		break;	
+		}		
+	}//if end
+	
+	document.write("n : "+m);
+	
+	</script>
+
+
+</body>
+</html>

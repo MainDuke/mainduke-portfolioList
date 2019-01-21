@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<!-- 1. LoggingAdvice 등록 -->
+
+	<bean id="LoggingAdvice" class="com.zeroad.spring.aop.advice.LoggingAdvice">
+	</bean>
+	
+	<!-- OrderService Target 등록 -->
+	<bean id="orderServiceTarget" class="com.zeroad.spring.service.order.OrderServiceImpl">
+	</bean>
+	
+		
+	<!-- Advisor = DefaultPointcutAdvisor -->
+	<bean id="advisor" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice" ref="LoggingAdvice"/>
+		<property name="expression" value="execution(* *.*Order(..))"></property>
+	</bean>
+	
+	<!-- ProxyFactoryBean -->
+	
+	<bean id="orderService" class="org.springframework.aop.framework.ProxyFactoryBean">
+		
+		<property name="target">
+			<ref local="orderServiceTarget"/>
+		</property>
+		
+		<property name="interceptorNames">
+			<list>
+				<value>advisor</value>
+			</list>
+		</property>
+		
+	</bean>
+</beans>

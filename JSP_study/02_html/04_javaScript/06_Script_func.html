@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	
+	<body>
+	
+		<script type="text/javascript">
+		
+		m=prompt("점수 입력 ?", "");
+		n=parseInt(m); //정수로 변환.
+		
+		if (m=="" || m==null) {
+			alert("입력하지않았거나 취소 버튼 눌렀음.");
+		}else if (isNaN(n)) {
+			alert("indivisual Number(숫자를 입력하시오.)");	
+		}else if (n>100 || n<0) {
+			alert("0~100사이만 입력해라.");
+		}else if (n>=90) {
+			alert(n+"은 A학점");
+		}else if (n>=80) {
+			alert(n+"은 B학점");
+		}else if (n>=70) {
+			alert(n+"은 C학점");
+		}else if (n>=60) {
+			alert(n+"은 D학점");
+		}else{
+			alert(n+"은 F학점");
+		}
+		
+		document.write("점수 : "+n);
+	
+	</script>
+	
+	</body>
+</html>
